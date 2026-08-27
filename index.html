@@ -1,290 +1,2325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#05070d">
-  <meta name="description" content="senpai.ac — futuristic anime gaming profile">
-  <title>senpai.ac</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#05070d">
+<meta name="description" content="Rafsan — anime, gaming, code and digital space">
+
+<title>senpai.ac — RAFSAN</title>
+
+<style>
+
+/* =========================================================
+   SENPAI.AC // GLOBAL
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #05070d;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(255,255,255,.25);
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 10%,
+      rgba(0,0,0,.35) 70%,
+      rgba(0,0,0,.85) 100%
+    ),
+    url("YOUR-BACKGROUND-IMAGE-HERE")
+    center / cover no-repeat;
+
+  transform: scale(1.03);
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -9;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,0,0,.65),
+      rgba(0,0,0,.2),
+      rgba(0,0,0,.7)
+    );
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(255,255,255,.018) 4px
+  );
+}
+
+
+/* =========================================================
+   GLASS
+   ========================================================= */
+
+.glass {
+  border: 1px solid rgba(255,255,255,.1);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.07),
+      rgba(255,255,255,.025)
+    );
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 70px rgba(0,0,0,.3),
+    inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.page {
+  width: min(1180px, 92%);
+  margin: auto;
+  padding: 25px 0 40px;
+}
+
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+
+.topbar {
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 20px;
+
+  border-radius: 18px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255,255,255,.35);
+
+  font-size: 19px;
+  font-weight: 900;
+
+  transform: rotate(45deg);
+}
+
+.brand-mark::first-letter {
+  transform: rotate(-45deg);
+}
+
+.brand strong {
+  display: block;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.brand small {
+  display: block;
+  margin-top: 3px;
+
+  font-family: monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  opacity: .45;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+
+  opacity: .7;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+  background: #fff;
+
+  box-shadow: 0 0 12px rgba(255,255,255,.8);
+
+  animation: statusPulse 1.5s infinite;
+}
+
+@keyframes statusPulse {
+  50% {
+    opacity: .25;
+    transform: scale(.7);
+  }
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  margin-top: 20px;
+
+  min-height: 570px;
+
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 30px;
+
+  padding: 55px;
+
+  border-radius: 25px;
+
+  align-items: center;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.04);
+
+  filter: blur(80px);
+
+  top: -220px;
+  right: -150px;
+
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow,
+.section-label {
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  opacity: .5;
+}
+
+.eyebrow {
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 7vw, 78px);
+  line-height: .95;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #fff,
+    rgba(255,255,255,.35)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.intro {
+  max-width: 550px;
+
+  color: rgba(255,255,255,.6);
+
+  line-height: 1.7;
+  font-size: 14px;
+
+  margin-bottom: 30px;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255,255,255,.4);
+
+  background: rgba(0,0,0,.3);
+
+  font-size: 25px;
+  font-weight: 900;
+
+  box-shadow:
+    0 0 30px rgba(255,255,255,.05);
+}
+
+.profile-row h2 {
+  font-size: 17px;
+  letter-spacing: 3px;
+}
+
+.profile-row p {
+  margin-top: 5px;
+
+  font-size: 10px;
+  font-family: monospace;
+
+  opacity: .45;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 13px 20px;
+
+  border: 1px solid rgba(255,255,255,.15);
+
+  background: rgba(255,255,255,.04);
+
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+
+  transition: .25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255,255,255,.12);
+
+  border-color: rgba(255,255,255,.4);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.btn.primary {
+  background: rgba(255,255,255,.12);
+}
+
+
+/* =========================================================
+   TERMINAL
+   ========================================================= */
+
+.hero-terminal {
+  border: 1px solid rgba(255,255,255,.12);
+
+  background: rgba(0,0,0,.4);
+
+  box-shadow:
+    inset 0 0 40px rgba(255,255,255,.025),
+    0 20px 60px rgba(0,0,0,.25);
+
+  font-family: monospace;
+
+  position: relative;
+}
+
+.terminal-head {
+  padding: 13px 15px;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255,255,255,.08);
+
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  opacity: .55;
+}
+
+.terminal-body {
+  padding: 25px 20px;
+
+  min-height: 260px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  font-size: 11px;
+}
+
+.terminal-body p {
+  opacity: .65;
+}
+
+.terminal-body p span {
+  margin-right: 7px;
+}
+
+.terminal-body .dim {
+  opacity: .25;
+}
+
+.terminal-body b {
+  font-weight: 400;
+  opacity: .9;
+}
+
+.cursor {
+  animation: cursorBlink 1s infinite;
+}
+
+@keyframes cursorBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   CLOCK
+   ========================================================= */
+
+.clock-card {
+  margin-top: 20px;
+
+  padding: 25px 30px;
+
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clock-card h2 {
+  font-family: monospace;
+
+  font-size: clamp(30px, 6vw, 50px);
+
+  margin-top: 7px;
+
+  letter-spacing: 3px;
+}
+
+.clock-card p {
+  margin-top: 4px;
+
+  font-family: monospace;
+  font-size: 10px;
+
+  opacity: .4;
+}
+
+.clock-icon {
+  font-size: 65px;
+  opacity: .12;
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.links-section {
+  margin-top: 80px;
+}
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  margin-top: 7px;
+
+  font-size: clamp(25px, 5vw, 38px);
+
+  letter-spacing: -1px;
+}
+
+.link-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
+}
+
+.link-card {
+  min-height: 100px;
+
+  padding: 20px;
+
+  border-radius: 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  position: relative;
+
+  transition:
+    transform .15s ease,
+    border-color .25s ease,
+    background .25s ease;
+}
+
+.link-card:hover {
+  border-color: rgba(255,255,255,.3);
+
+  background:
+    rgba(255,255,255,.08);
+}
+
+.link-icon {
+  width: 43px;
+  height: 43px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255,255,255,.15);
+
+  font-size: 18px;
+
+  flex-shrink: 0;
+}
+
+.link-info span {
+  display: block;
+
+  font-family: monospace;
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+.link-info small {
+  display: block;
+
+  margin-top: 6px;
+
+  font-size: 9px;
+
+  opacity: .35;
+}
+
+.arrow {
+  margin-left: auto;
+
+  font-size: 18px;
+
+  opacity: .35;
+
+  transition: .25s;
+}
+
+.link-card:hover .arrow {
+  opacity: 1;
+  transform: translate(3px,-3px);
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+  margin-top: 20px;
+
+  padding: 35px;
+
+  border-radius: 22px;
+}
+
+.about h2 {
+  margin-top: 7px;
+
+  font-size: 32px;
+}
+
+.about > p {
+  max-width: 750px;
+
+  margin-top: 20px;
+
+  color: rgba(255,255,255,.55);
+
+  line-height: 1.8;
+
+  font-size: 13px;
+}
+
+.stats {
+  margin-top: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.stats div {
+  padding: 22px 15px;
+
+  border-right: 1px solid rgba(255,255,255,.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stats div:last-child {
+  border-right: 0;
+}
+
+.stats strong {
+  font-size: 24px;
+}
+
+.stats span {
+  font-family: monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  opacity: .4;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  margin-top: 50px;
+  padding: 20px 5px;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  opacity: .3;
+}
+
+
+/* =========================================================
+   CINEMATIC LOADING SCREEN
+   ========================================================= */
+
+.loader {
+  position: fixed;
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #03050a;
+
+  transition:
+    opacity .9s ease,
+    visibility .9s ease;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+/* Reuse main background automatically */
+
+.loader-bg {
+  position: absolute;
+  inset: -8%;
+
+  background: inherit;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.88),
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.88)
+    ),
+    url("YOUR-BACKGROUND-IMAGE-HERE");
+
+  background-position: center;
+  background-size: cover;
+
+  filter: saturate(.7) contrast(1.15);
+
+  animation:
+    loaderZoom 12s ease-in-out infinite alternate;
+
+  z-index: -5;
+}
+
+@keyframes loaderZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+
+/* Grid */
+
+.loader-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: .17;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.05) 1px,
+      transparent 1px
+    );
+
+  background-size: 45px 45px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 25%,
+      black 75%,
+      transparent
+    );
+
+  animation: gridMove 8s linear infinite;
+}
+
+@keyframes gridMove {
+  to {
+    background-position: 45px 45px;
+  }
+}
+
+
+/* Scanlines */
+
+.loader-scanlines {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(255,255,255,.025) 4px
+  );
+
+  animation: scanMove 7s linear infinite;
+}
+
+@keyframes scanMove {
+  to {
+    background-position: 0 100px;
+  }
+}
+
+
+/* Vignette */
+
+.loader-vignette {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 20%,
+      rgba(0,0,0,.35) 60%,
+      rgba(0,0,0,.9) 100%
+    );
+}
+
+
+/* HUD */
+
+.hud-corner {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  font-family: monospace;
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  opacity: .5;
+}
+
+.hud-corner span:last-child {
+  opacity: .4;
+}
+
+.hud-tl {
+  top: 28px;
+  left: 30px;
+}
+
+.hud-tr {
+  top: 28px;
+  right: 30px;
+  text-align: right;
+}
+
+.hud-bl {
+  bottom: 28px;
+  left: 30px;
+}
+
+.hud-br {
+  bottom: 28px;
+  right: 30px;
+  text-align: right;
+}
+
+
+/* Loader content */
+
+.loader-content {
+  width: min(650px, 88%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* Tag */
+
+.system-tag {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 28px;
+
+  font-family: monospace;
+  font-size: 8px;
+
+  letter-spacing: 4px;
+
+  opacity: .55;
+}
+
+.tag-line {
+  width: 35px;
+  height: 1px;
+
+  background: currentColor;
+}
+
+
+/* Core */
+
+.loader-core {
+  position: relative;
+
+  width: 145px;
+  height: 145px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 28px;
+}
+
+.core-ring {
+  position: absolute;
+
+  border: 1px solid rgba(255,255,255,.2);
+
+  border-radius: 50%;
+}
+
+.ring-1 {
+  inset: 3px;
+
+  border-style: dashed;
+
+  animation: spin 8s linear infinite;
+}
+
+.ring-2 {
+  inset: 17px;
+
+  border-style: dotted;
+
+  animation: spinReverse 5s linear infinite;
+}
+
+.ring-3 {
+  inset: 31px;
+
+  border-color: rgba(255,255,255,.4);
+
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+
+/* Crosshair */
+
+.core-cross {
+  position: absolute;
+
+  opacity: .3;
+}
+
+.horizontal {
+  width: 100%;
+  height: 1px;
+
+  background: currentColor;
+}
+
+.vertical {
+  width: 1px;
+  height: 100%;
+
+  background: currentColor;
+}
+
+
+/* S */
+
+.loader-symbol {
+  width: 70px;
+  height: 70px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255,255,255,.7);
+
+  background: rgba(0,0,0,.35);
+
+  transform: rotate(45deg);
+
+  box-shadow:
+    0 0 30px rgba(255,255,255,.08),
+    inset 0 0 25px rgba(255,255,255,.04);
+}
+
+.loader-symbol span {
+  font-size: 32px;
+  font-weight: 900;
+
+  transform: rotate(-45deg);
+
+  text-shadow:
+    0 0 12px rgba(255,255,255,.7);
+}
+
+
+/* Logo */
+
+.loader-logo {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-bottom: 30px;
+}
+
+.loader-logo .glitch {
+  font-size: clamp(30px, 6vw, 48px);
+
+  font-weight: 900;
+
+  letter-spacing: 8px;
+
+  animation: logoFlicker 4s infinite;
+}
+
+.loader-logo small {
+  font-family: monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 4px;
+
+  opacity: .4;
+}
+
+@keyframes logoFlicker {
+
+  0%, 92%, 100% {
+    opacity: 1;
+  }
+
+  93% {
+    opacity: .65;
+    transform: translateX(-2px);
+  }
+
+  94% {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+
+  95% {
+    opacity: .75;
+  }
+}
+
+
+/* Boot terminal */
+
+.boot-terminal {
+  width: min(470px,100%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 11px 14px;
+
+  border: 1px solid rgba(255,255,255,.1);
+
+  background: rgba(0,0,0,.35);
+
+  font-family: monospace;
+
+  font-size: 9px;
+
+  margin-bottom: 18px;
+}
+
+.boot-arrow {
+  margin-right: 6px;
+  opacity: .55;
+}
+
+.boot-code {
+  display: flex;
+  gap: 12px;
+  opacity: .4;
+}
+
+.boot-live {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: .2;
+  }
+}
+
+
+/* Progress */
+
+.progress-area {
+  width: min(470px,100%);
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  opacity: .55;
+}
+
+.progress-meta strong {
+  font-weight: 400;
+}
+
+.progress-track {
+  height: 5px;
+
+  background: rgba(255,255,255,.08);
+
+  overflow: hidden;
+}
+
+.progress-bar {
+  position: relative;
+
+  width: 0%;
+  height: 100%;
+
+  background: rgba(255,255,255,.9);
+
+  transition: width .12s linear;
+}
+
+.progress-glow {
+  position: absolute;
+
+  right: 0;
+  top: -5px;
+
+  width: 40px;
+  height: 15px;
+
+  background: rgba(255,255,255,.7);
+
+  filter: blur(8px);
+}
+
+.progress-markers {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 6px;
+
+  font-family: monospace;
+
+  font-size: 7px;
+
+  opacity: .25;
+}
+
+
+/* Access */
+
+.access-granted {
+  margin-top: 25px;
+
+  font-family: monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 4px;
+
+  opacity: 0;
+
+  transform: translateY(8px);
+
+  transition:
+    opacity .4s ease,
+    transform .4s ease;
+}
+
+.access-granted.show {
+  opacity: .9;
+
+  transform: translateY(0);
+}
+
+.access-granted span {
+  margin: 0 8px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .page {
+    width: 94%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    padding: 35px 25px;
+  }
+
+  .hero-terminal {
+    margin-top: 10px;
+  }
+
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .topbar {
+    min-height: 65px;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .intro {
+    font-size: 12px;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+
+  .clock-card {
+    padding: 22px;
+  }
+
+  .clock-icon {
+    font-size: 45px;
+  }
+
+  .about {
+    padding: 25px;
+  }
+
+  .stats strong {
+    font-size: 19px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hud-corner {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .hud-tl,
+  .hud-bl {
+    left: 15px;
+  }
+
+  .hud-tr,
+  .hud-br {
+    right: 15px;
+  }
+
+  .loader-core {
+    width: 120px;
+    height: 120px;
+  }
+
+  .loader-symbol {
+    width: 60px;
+    height: 60px;
+  }
+
+  .loader-symbol span {
+    font-size: 27px;
+  }
+
+  .loader-logo .glitch {
+    letter-spacing: 5px;
+  }
+
+  .boot-terminal {
+    font-size: 7px;
+  }
+
+  .system-tag {
+    letter-spacing: 2px;
+  }
+
+  .access-granted {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-  <!-- ================= GAMING LOADING SCREEN ================= -->
-  <div id="loader" class="loader">
-    <div class="loader-grid"></div>
-    <div class="loader-content">
-      <div class="loader-symbol">S</div>
-      <div class="loader-label">SENPAI.AC // SYSTEM BOOT</div>
-      <div class="progress-wrap">
-        <div id="progressBar" class="progress-bar"></div>
-      </div>
-      <div id="progressText" class="progress-text">0%</div>
-    </div>
+
+<!-- =========================================================
+     BACKGROUND
+     ========================================================= -->
+
+<div class="bg"></div>
+<div class="bg-overlay"></div>
+<div class="scanlines"></div>
+
+
+<!-- =========================================================
+     CINEMATIC LOADING SCREEN
+     ========================================================= -->
+
+<div id="loader" class="loader">
+
+  <div class="loader-bg"></div>
+
+  <div class="loader-grid"></div>
+  <div class="loader-scanlines"></div>
+  <div class="loader-vignette"></div>
+
+
+  <!-- HUD -->
+
+  <div class="hud-corner hud-tl">
+    <span>SYS://BOOT</span>
+    <span>NODE_07</span>
   </div>
 
-  <!-- YOUR UPLOADED IMAGE IS THE REAL BACKGROUND -->
-  <div class="bg"></div>
-  <div class="bg-overlay"></div>
-  <div class="scanlines"></div>
+  <div class="hud-corner hud-tr">
+    <span>SECURE</span>
+    <span>ENCRYPTED</span>
+  </div>
 
-  <main class="page">
+  <div class="hud-corner hud-bl">
+    <span>© SENPAI.AC</span>
+    <span>2026</span>
+  </div>
 
-    <!-- ================= TOP HUD ================= -->
-    <header class="topbar glass">
-      <div class="brand">
-        <span class="brand-mark">S</span>
-        <div>
-          <strong>senpai.ac</strong>
-          <small>ANIME // GAMING // DIGITAL SPACE</small>
+  <div class="hud-corner hud-br">
+    <span>VER. 2.0.26</span>
+    <span id="loaderStatus">INITIALIZING</span>
+  </div>
+
+
+  <!-- MAIN LOADER -->
+
+  <div class="loader-content">
+
+    <div class="system-tag">
+      <span class="tag-line"></span>
+      NEURAL INTERFACE
+      <span class="tag-line"></span>
+    </div>
+
+
+    <!-- CORE -->
+
+    <div class="loader-core">
+
+      <div class="core-ring ring-1"></div>
+      <div class="core-ring ring-2"></div>
+      <div class="core-ring ring-3"></div>
+
+      <div class="core-cross horizontal"></div>
+      <div class="core-cross vertical"></div>
+
+      <div class="loader-symbol">
+        <span>S</span>
+      </div>
+
+    </div>
+
+
+    <!-- LOGO -->
+
+    <div class="loader-logo">
+
+      <div class="glitch">
+        SENPAI.AC
+      </div>
+
+      <small>
+        ANIME // GAMING // DIGITAL SPACE
+      </small>
+
+    </div>
+
+
+    <!-- TERMINAL -->
+
+    <div class="boot-terminal">
+
+      <div>
+        <span class="boot-arrow">></span>
+
+        <span id="bootMessage">
+          Establishing neural link...
+        </span>
+      </div>
+
+      <div class="boot-code">
+
+        <span id="bootCode">
+          SYS_0001
+        </span>
+
+        <span class="boot-live">
+          ● LIVE
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- PROGRESS -->
+
+    <div class="progress-area">
+
+      <div class="progress-meta">
+
+        <span>
+          SYSTEM INITIALIZATION
+        </span>
+
+        <strong id="progressText">
+          0%
+        </strong>
+
+      </div>
+
+
+      <div class="progress-track">
+
+        <div
+          id="progressBar"
+          class="progress-bar"
+        >
+          <div class="progress-glow"></div>
         </div>
+
       </div>
 
-      <div class="status">
-        <span class="status-dot"></span>
-        <span>ONLINE</span>
+
+      <div class="progress-markers">
+        <span>00</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
       </div>
-    </header>
 
-    <!-- ================= HERO ================= -->
-    <section class="hero glass">
+    </div>
 
-      <div class="hero-content">
-        <div class="eyebrow">SENPAI.AC // ACCESS GRANTED</div>
 
-        <h1>
-          WELCOME TO<br>
-          <span>senpai.ac</span>
-        </h1>
+    <!-- ACCESS -->
 
-        <p class="intro">
-          Welcome to my digital space — anime, gaming, code and everything
-          inside my world.
+    <div id="accessGranted" class="access-granted">
+
+      <span>◆</span>
+      ACCESS GRANTED
+      <span>◆</span>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     MAIN PAGE
+     ========================================================= -->
+
+<main class="page">
+
+
+<!-- TOP HUD -->
+
+<header class="topbar glass">
+
+  <div class="brand">
+
+    <span class="brand-mark">
+      S
+    </span>
+
+    <div>
+
+      <strong>
+        senpai.ac
+      </strong>
+
+      <small>
+        ANIME // GAMING // DIGITAL SPACE
+      </small>
+
+    </div>
+
+  </div>
+
+
+  <div class="status">
+
+    <span class="status-dot"></span>
+
+    <span>
+      ONLINE
+    </span>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero glass">
+
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      SENPAI.AC // ACCESS GRANTED
+    </div>
+
+
+    <h1>
+      WELCOME TO<br>
+      <span>senpai.ac</span>
+    </h1>
+
+
+    <p class="intro">
+
+      Welcome to my digital space —
+      anime, gaming, code and everything
+      inside my world.
+
+    </p>
+
+
+    <div class="profile-row">
+
+      <div class="avatar">
+        R
+      </div>
+
+      <div>
+
+        <h2>
+          RAFSAN
+        </h2>
+
+        <p>
+          Anime • Gaming • Code • Digital World
         </p>
 
-        <div class="profile-row">
-          <div class="avatar">S</div>
-
-          <div>
-            <h2>YOUR NAME</h2>
-            <p>Anime • Gaming • Code • Digital World</p>
-          </div>
-        </div>
-
-        <div class="actions">
-          <a href="#links" class="btn primary">ENTER SYSTEM</a>
-          <a href="#about" class="btn">ABOUT</a>
-        </div>
       </div>
 
-      <!-- GAME-LIKE TERMINAL -->
-      <div class="hero-terminal">
-        <div class="terminal-head">
-          <span>SENPAI.AC://SYSTEM</span>
-          <span>● ● ●</span>
-        </div>
+    </div>
 
-        <div class="terminal-body">
-          <p><span>&gt;</span> system.boot</p>
-          <p class="dim">initializing senpai.ac...</p>
-          <p><span>&gt;</span> status <b>ONLINE</b></p>
-          <p><span>&gt;</span> security <b>ACTIVE</b></p>
-          <p><span>&gt;</span> clock <b id="terminalClock">--:--:--</b></p>
-          <p><span>&gt;</span> player.access <b>GRANTED</b></p>
-          <p><span>&gt;</span> welcome.player<span class="cursor">_</span></p>
-        </div>
-      </div>
 
-    </section>
+    <div class="actions">
 
-    <!-- ================= LIVE CLOCK ================= -->
-    <section class="clock-card glass">
-      <div>
-        <span class="section-label">SYSTEM TIME</span>
-        <h2 id="clock">00:00:00</h2>
-        <p id="date">Loading...</p>
-      </div>
+      <a
+        href="#links"
+        class="btn primary"
+      >
+        ENTER SYSTEM
+      </a>
 
-      <div class="clock-icon">◷</div>
-    </section>
+      <a
+        href="#about"
+        class="btn"
+      >
+        ABOUT
+      </a>
 
-<!-- ================= SOCIAL LINKS ================= -->
+    </div>
+
+  </div>
+
+
+
+  <!-- TERMINAL -->
+
+  <div class="hero-terminal">
+
+    <div class="terminal-head">
+
+      <span>
+        SENPAI.AC://SYSTEM
+      </span>
+
+      <span>
+        ● ● ●
+      </span>
+
+    </div>
+
+
+    <div class="terminal-body">
+
+      <p>
+        <span>></span>
+        system.boot
+      </p>
+
+      <p class="dim">
+        initializing senpai.ac...
+      </p>
+
+      <p>
+        <span>></span>
+        player.name
+        <b>RAFSAN</b>
+      </p>
+
+      <p>
+        <span>></span>
+        status
+        <b>ONLINE</b>
+      </p>
+
+      <p>
+        <span>></span>
+        security
+        <b>ACTIVE</b>
+      </p>
+
+      <p>
+        <span>></span>
+        clock
+        <b id="terminalClock">
+          --:--:--
+        </b>
+      </p>
+
+      <p>
+        <span>></span>
+        player.access
+        <b>GRANTED</b>
+      </p>
+
+      <p>
+        <span>></span>
+        welcome.RAFSAN
+        <span class="cursor">_</span>
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CLOCK
+     ========================================================= -->
+
+<section class="clock-card glass">
+
+  <div>
+
+    <span class="section-label">
+      SYSTEM TIME
+    </span>
+
+    <h2 id="clock">
+      00:00:00
+    </h2>
+
+    <p id="date">
+      Loading...
+    </p>
+
+  </div>
+
+  <div class="clock-icon">
+    ◷
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SOCIAL LINKS
+     ========================================================= -->
+
 <section id="links" class="links-section">
 
   <div class="section-heading">
-    <span class="section-label">PLAYER CONNECTIONS</span>
-    <h2>FIND ME ONLINE</h2>
+
+    <span class="section-label">
+      PLAYER CONNECTIONS
+    </span>
+
+    <h2>
+      FIND ME ONLINE
+    </h2>
+
   </div>
+
 
   <div class="link-grid">
 
+
     <!-- INSTAGRAM -->
-    <a class="link-card glass"
-       href="https://www.instagram.com/_i_am_eren.jeager/"
-       target="_blank"
-       rel="noopener noreferrer">
-      <div class="link-icon">◎</div>
-      <div class="link-info">
-        <span>INSTAGRAM</span>
-        <small>@_i_am_eren.jeager</small>
+
+    <a
+      class="link-card glass"
+      href="https://www.instagram.com/_i_am_eren.jeager/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="link-icon">
+        ◎
       </div>
-      <span class="arrow">↗</span>
+
+      <div class="link-info">
+
+        <span>
+          INSTAGRAM
+        </span>
+
+        <small>
+          @_i_am_eren.jeager
+        </small>
+
+      </div>
+
+      <span class="arrow">
+        ↗
+      </span>
+
     </a>
+
+
 
     <!-- GITHUB -->
-    <a class="link-card glass"
-       href="https://github.com/rafsani533-maker"
-       target="_blank"
-       rel="noopener noreferrer">
-      <div class="link-icon">◈</div>
-      <div class="link-info">
-        <span>GITHUB</span>
-        <small>github.com/rafsani533-maker</small>
+
+    <a
+      class="link-card glass"
+      href="https://github.com/rafsani533-maker"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="link-icon">
+        ◈
       </div>
-      <span class="arrow">↗</span>
+
+      <div class="link-info">
+
+        <span>
+          GITHUB
+        </span>
+
+        <small>
+          github.com/rafsani533-maker
+        </small>
+
+      </div>
+
+      <span class="arrow">
+        ↗
+      </span>
+
     </a>
+
+
 
     <!-- YOUTUBE -->
-    <a class="link-card glass"
-       href="https://youtube.com/@rafsanislam-bc9jk"
-       target="_blank"
-       rel="noopener noreferrer">
-      <div class="link-icon">▶</div>
-      <div class="link-info">
-        <span>YOUTUBE</span>
-        <small>Sickapich by rs.</small>
+
+    <a
+      class="link-card glass"
+      href="https://youtube.com/@rafsanislam-bc9jk"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="link-icon">
+        ▶
       </div>
-      <span class="arrow">↗</span>
+
+      <div class="link-info">
+
+        <span>
+          YOUTUBE
+        </span>
+
+        <small>
+          Sickapich by rs.
+        </small>
+
+      </div>
+
+      <span class="arrow">
+        ↗
+      </span>
+
     </a>
 
-    <!-- DISCORD — ADD YOUR LINK LATER -->
-    <a class="link-card glass"
-       href="#"
-       target="_blank"
-       rel="noopener noreferrer">
-      <div class="link-icon">◉</div>
-      <div class="link-info">
-        <span>DISCORD</span>
-        <small>Discord — coming soon</small>
+
+
+    <!-- DISCORD -->
+
+    <a
+      class="link-card glass"
+      href="#"
+    >
+
+      <div class="link-icon">
+        ◉
       </div>
-      <span class="arrow">↗</span>
+
+      <div class="link-info">
+
+        <span>
+          DISCORD
+        </span>
+
+        <small>
+          Discord — coming soon
+        </small>
+
+      </div>
+
+      <span class="arrow">
+        ↗
+      </span>
+
     </a>
 
   </div>
 
 </section>
 
-    <!-- ================= ABOUT ================= -->
-    <section id="about" class="about glass">
-      <div>
-        <span class="section-label">PLAYER DATA</span>
-        <h2>ABOUT ME</h2>
-      </div>
 
-      <p>
-        Replace this text with your own introduction. Tell visitors who you
-        are, what you like, what you create, or anything you want them to know.
-      </p>
 
-      <div class="stats">
-        <div><strong>∞</strong><span>PROJECTS</span></div>
-        <div><strong>24/7</strong><span>ONLINE</span></div>
-        <div><strong>S</strong><span>ACCESS LEVEL</span></div>
-      </div>
-    </section>
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
 
-    <footer>
-      <span>senpai.ac // 2026</span>
-      <span>WELCOME TO MY DIGITAL WORLD</span>
-    </footer>
+<section id="about" class="about glass">
 
-  </main>
+  <div>
 
-  <!-- ================= SCRIPT.JS INSIDE INDEX.HTML ================= -->
-  <script>
-    // Gaming-style loading screen
-    const loader = document.getElementById("loader");
-    const progressBar = document.getElementById("progressBar");
-    const progressText = document.getElementById("progressText");
+    <span class="section-label">
+      PLAYER DATA
+    </span>
 
-    let progress = 0;
+    <h2>
+      ABOUT RAFSAN
+    </h2>
 
-    const loading = setInterval(() => {
-      progress += Math.floor(Math.random() * 7) + 4;
+  </div>
 
-      if (progress >= 100) {
-        progress = 100;
-        clearInterval(loading);
 
-        setTimeout(() => {
-          loader.classList.add("hidden");
-        }, 400);
-      }
+  <p>
 
-      progressBar.style.width = progress + "%";
-      progressText.textContent = progress + "%";
-    }, 90);
+    Welcome to my digital world.
+    I'm Rafsan — an anime lover, gamer and
+    creator exploring code, digital worlds
+    and everything that makes the internet
+    interesting.
 
-    // Live system clock
-    function updateClock() {
-      const now = new Date();
+  </p>
 
-      const time = now.toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false
-      });
 
-      const date = now.toLocaleDateString([], {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-      });
+  <div class="stats">
 
-      document.getElementById("clock").textContent = time;
-      document.getElementById("terminalClock").textContent = time;
-      document.getElementById("date").textContent = date;
+    <div>
+
+      <strong>
+        ∞
+      </strong>
+
+      <span>
+        PROJECTS
+      </span>
+
+    </div>
+
+
+    <div>
+
+      <strong>
+        24/7
+      </strong>
+
+      <span>
+        ONLINE
+      </span>
+
+    </div>
+
+
+    <div>
+
+      <strong>
+        S
+      </strong>
+
+      <span>
+        ACCESS LEVEL
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <span>
+    senpai.ac // 2026 // RAFSAN
+  </span>
+
+  <span>
+    WELCOME TO MY DIGITAL WORLD
+  </span>
+
+</footer>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script>
+
+/* =========================================================
+   CINEMATIC BOOT
+   ========================================================= */
+
+const loader =
+  document.getElementById("loader");
+
+const progressBar =
+  document.getElementById("progressBar");
+
+const progressText =
+  document.getElementById("progressText");
+
+const bootMessage =
+  document.getElementById("bootMessage");
+
+const bootCode =
+  document.getElementById("bootCode");
+
+const loaderStatus =
+  document.getElementById("loaderStatus");
+
+const accessGranted =
+  document.getElementById("accessGranted");
+
+
+const bootMessages = [
+
+  ["Establishing neural link...", "SYS_0001"],
+
+  ["Scanning digital environment...", "SCAN_0017"],
+
+  ["Loading player identity...", "ID_RAFSAN"],
+
+  ["Synchronizing anime database...", "ANM_7731"],
+
+  ["Initializing gaming protocols...", "GAME_4420"],
+
+  ["Decrypting player profile...", "SEC_9012"],
+
+  ["Connecting to SENPAI network...", "NET_5530"],
+
+  ["Finalizing interface...", "UI_2026"],
+
+  ["System ready.", "BOOT_9999"]
+
+];
+
+
+let progress = 0;
+let messageIndex = 0;
+
+
+function updateBootMessage() {
+
+  const current =
+    bootMessages[messageIndex];
+
+  bootMessage.textContent =
+    current[0];
+
+  bootCode.textContent =
+    current[1];
+
+  messageIndex++;
+
+  if (
+    messageIndex >=
+    bootMessages.length
+  ) {
+    messageIndex = 0;
+  }
+
+}
+
+
+updateBootMessage();
+
+
+const loading =
+  setInterval(() => {
+
+    progress +=
+      Math.floor(
+        Math.random() * 5
+      ) + 2;
+
+
+    if (progress >= 100) {
+
+      progress = 100;
+
+      clearInterval(loading);
+
+
+      progressBar.style.width =
+        "100%";
+
+      progressText.textContent =
+        "100%";
+
+
+      bootMessage.textContent =
+        "System ready. Welcome, Rafsan.";
+
+      bootCode.textContent =
+        "ACCESS_0000";
+
+      loaderStatus.textContent =
+        "ONLINE";
+
+
+      accessGranted.classList.add(
+        "show"
+      );
+
+
+      setTimeout(() => {
+
+        loader.classList.add(
+          "hidden"
+        );
+
+      }, 1100);
+
+      return;
+
     }
 
-    updateClock();
-    setInterval(updateClock, 1000);
 
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener("click", event => {
-        const target = document.querySelector(link.getAttribute("href"));
+    progressBar.style.width =
+      progress + "%";
+
+    progressText.textContent =
+      progress + "%";
+
+
+    if (progress % 10 < 5) {
+
+      updateBootMessage();
+
+    }
+
+  }, 100);
+
+
+
+/* =========================================================
+   LIVE CLOCK
+   ========================================================= */
+
+function updateClock() {
+
+  const now = new Date();
+
+
+  const time =
+    now.toLocaleTimeString([], {
+
+      hour: "2-digit",
+
+      minute: "2-digit",
+
+      second: "2-digit",
+
+      hour12: false
+
+    });
+
+
+  const date =
+    now.toLocaleDateString([], {
+
+      weekday: "long",
+
+      year: "numeric",
+
+      month: "long",
+
+      day: "numeric"
+
+    });
+
+
+  document.getElementById(
+    "clock"
+  ).textContent = time;
+
+
+  document.getElementById(
+    "terminalClock"
+  ).textContent = time;
+
+
+  document.getElementById(
+    "date"
+  ).textContent = date;
+
+}
+
+
+updateClock();
+
+setInterval(
+  updateClock,
+  1000
+);
+
+
+
+/* =========================================================
+   SMOOTH SCROLL
+   ========================================================= */
+
+document
+  .querySelectorAll(
+    'a[href^="#"]'
+  )
+  .forEach(link => {
+
+    link.addEventListener(
+      "click",
+      event => {
+
+        const target =
+          document.querySelector(
+            link.getAttribute("href")
+          );
+
 
         if (target) {
+
           event.preventDefault();
-          target.scrollIntoView({ behavior: "smooth" });
+
+          target.scrollIntoView({
+            behavior: "smooth"
+          });
+
         }
-      });
-    });
 
-    // Desktop game-card movement
-    document.querySelectorAll(".link-card").forEach(card => {
-      card.addEventListener("mousemove", event => {
-        if (window.innerWidth < 800) return;
+      }
+    );
 
-        const rect = card.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
+  });
 
-        const rotateY = ((x / rect.width) - 0.5) * 5;
-        const rotateX = ((y / rect.height) - 0.5) * -5;
+
+
+/* =========================================================
+   3D GAME CARD MOVEMENT
+   ========================================================= */
+
+document
+  .querySelectorAll(".link-card")
+  .forEach(card => {
+
+
+    card.addEventListener(
+      "mousemove",
+      event => {
+
+        if (
+          window.innerWidth < 800
+        ) return;
+
+
+        const rect =
+          card.getBoundingClientRect();
+
+
+        const x =
+          event.clientX -
+          rect.left;
+
+
+        const y =
+          event.clientY -
+          rect.top;
+
+
+        const rotateY =
+          ((x / rect.width) - .5)
+          * 5;
+
+
+        const rotateX =
+          ((y / rect.height) - .5)
+          * -5;
+
 
         card.style.transform =
-          `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
-      });
+          `perspective(700px)
+           rotateX(${rotateX}deg)
+           rotateY(${rotateY}deg)
+           translateY(-3px)`;
 
-      card.addEventListener("mouseleave", () => {
+      }
+    );
+
+
+    card.addEventListener(
+      "mouseleave",
+      () => {
+
         card.style.transform = "";
-      });
-    });
-  </script>
+
+      }
+    );
+
+  });
+
+</script>
 
 </body>
 </html>
