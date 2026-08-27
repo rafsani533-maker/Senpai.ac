@@ -4,19 +4,13 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="theme-color"
-    content="#03050a"
-  >
+  <meta name="theme-color" content="#05070d">
 
   <meta
     name="description"
-    content="RAFSAN // SENPAI.AC futuristic anime gaming digital space"
+    content="RAFSAN // senpai.ac futuristic anime gaming profile"
   >
 
   <title>RAFSAN // senpai.ac</title>
@@ -24,81 +18,42 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
-  <!-- =====================================================
-       GLOBAL BACKGROUND
-       ===================================================== -->
+  <!-- ================= BACKGROUND ================= -->
 
   <div class="bg"></div>
-
   <div class="bg-overlay"></div>
-
   <div class="scanlines"></div>
 
 
-  <!-- =====================================================
-       GAME LOADING SCREEN
-       ===================================================== -->
+  <!-- ================= GAMING LOADING SCREEN ================= -->
 
-  <div
-    id="gameLoader"
-    class="game-loader"
-  >
+  <div id="loader" class="loader">
 
-    <div class="loader-ui">
+    <div class="loader-grid"></div>
 
-      <div class="loader-small">
-        SENPAI.AC // SYSTEM INITIALIZATION
+    <div class="loader-content">
+
+      <div class="loader-symbol">
+        S
       </div>
 
-
-      <div class="loader-title">
-
-        <div class="loader-s">
-          S
-        </div>
-
-        <h1>
-          SENPAI.AC
-        </h1>
-
-        <span>
-          DIGITAL WORLD // ACCESS SYSTEM
-        </span>
-
+      <div class="loader-label">
+        SENPAI.AC // SYSTEM BOOT
       </div>
 
-
-      <div class="loader-status">
-
-        <div id="bootText">
-          BOOTING SYSTEM...
+      <div class="progress-wrap">
+        <div
+          id="progressBar"
+          class="progress-bar">
         </div>
+      </div>
 
-        <div class="loader-line">
-
-          <div
-            id="loaderProgress"
-            class="loader-progress"
-          ></div>
-
-        </div>
-
-
-        <div class="loader-percent">
-
-          <span>
-            SYSTEM BOOT
-          </span>
-
-          <span id="loaderPercent">
-            0%
-          </span>
-
-        </div>
-
+      <div
+        id="progressText"
+        class="progress-text">
+        0%
       </div>
 
     </div>
@@ -106,340 +61,307 @@
 
     <!-- PLAYER CORNER -->
 
-    <div class="loader-player">
+    <div style="
+      position:absolute;
+      left:28px;
+      bottom:25px;
+      text-align:left;
+    ">
 
-      <small>
+      <div style="
+        color:#657589;
+        font-size:8px;
+        letter-spacing:3px;
+      ">
         PLAYER
-      </small>
+      </div>
 
-      <strong>
+      <div style="
+        color:#58f6ff;
+        font-size:18px;
+        font-weight:800;
+        letter-spacing:4px;
+        margin-top:4px;
+      ">
         RAFSAN
-      </strong>
+      </div>
 
     </div>
 
 
-    <div class="loader-version">
-      BUILD 2026 // v1.0
+    <div style="
+      position:absolute;
+      right:28px;
+      bottom:28px;
+      color:#566476;
+      font-size:8px;
+      letter-spacing:2px;
+    ">
+      BUILD 2026 // 01
     </div>
 
   </div>
 
 
 
-  <!-- =====================================================
-       GAME WORLD
-       ===================================================== -->
+  <!-- ================= MAIN PAGE ================= -->
 
-  <main id="game">
+  <main class="page">
 
 
-    <!-- ===================================================
-         HOME ROOM
-         =================================================== -->
+    <!-- ================= TOP HUD ================= -->
 
-    <section
-      id="homeRoom"
-      class="room active"
-    >
+    <header class="topbar glass">
 
-      <div class="room-background"></div>
+      <div class="brand">
 
-      <div class="room-overlay"></div>
-
-
-      <!-- PLAYER -->
-
-      <div class="player-corner">
-
-        <span>
-          PLAYER
+        <span class="brand-mark">
+          R
         </span>
 
-        <strong>
-          RAFSAN
-        </strong>
+        <div>
 
-      </div>
+          <strong>
+            senpai.ac
+          </strong>
 
+          <small>
+            ANIME // GAMING // DIGITAL SPACE
+          </small>
 
-      <!-- DIGITAL CLOCK -->
-
-      <div class="digital-time">
-
-        <div id="homeTime">
-          00:00:00
         </div>
 
-        <small id="homeDate">
-          SYSTEM DATE
-        </small>
-
       </div>
 
 
-      <!-- MAIN TITLE -->
+      <div class="status">
 
-      <div class="home-center">
+        <span class="status-dot"></span>
 
-        <div class="mini-label">
+        <span>
+          ONLINE
+        </span>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero glass">
+
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
           SENPAI.AC // ACCESS GRANTED
         </div>
 
+
         <h1>
-          RAFSAN
+
+          WELCOME TO<br>
+
+          <span>
+            RAFSAN
+          </span>
+
         </h1>
 
-        <p>
-          ANIME // GAMING // CODE // DIGITAL WORLD
+
+        <p class="intro">
+
+          Welcome to my digital space — anime,
+          gaming, code and everything inside my world.
+
         </p>
 
-      </div>
+
+        <div class="profile-row">
+
+          <div class="avatar">
+            R
+          </div>
 
 
-      <!-- GAME MENU -->
+          <div>
 
-      <nav class="game-menu">
+            <h2>
+              RAFSAN
+            </h2>
 
-        <button
-          class="menu-item selected"
-          data-room="profileRoom"
-        >
-          <span>01</span>
-          PROFILE
-        </button>
-
-
-        <button
-          class="menu-item"
-          data-room="socialRoom"
-        >
-          <span>02</span>
-          SOCIAL
-        </button>
-
-
-        <button
-          class="menu-item"
-          data-room="timeRoom"
-        >
-          <span>03</span>
-          SYSTEM TIME
-        </button>
-
-
-        <button
-          class="menu-item"
-          data-room="systemRoom"
-        >
-          <span>04</span>
-          SYSTEM
-        </button>
-
-      </nav>
-
-
-      <div class="home-hint">
-        SELECT // ENTER SYSTEM
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         PROFILE ROOM
-         =================================================== -->
-
-    <section
-      id="profileRoom"
-      class="room sub-room"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="player-corner">
-
-        <span>
-          PLAYER
-        </span>
-
-        <strong>
-          RAFSAN
-        </strong>
-
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          ROOM 01
-        </span>
-
-        <strong>
-          PLAYER PROFILE
-        </strong>
-
-      </div>
-
-
-      <div class="profile-room">
-
-
-        <div class="profile-symbol">
-          R
-        </div>
-
-
-        <div class="profile-content">
-
-          <small>
-            PLAYER IDENTIFICATION
-          </small>
-
-          <h1>
-            RAFSAN
-          </h1>
-
-          <p>
-            Anime enthusiast // Gamer // Developer
-          </p>
-
-
-          <div class="profile-data">
-
-            <div>
-
-              <span>
-                STATUS
-              </span>
-
-              <strong>
-                ONLINE
-              </strong>
-
-            </div>
-
-
-            <div>
-
-              <span>
-                CLASS
-              </span>
-
-              <strong>
-                CREATOR
-              </strong>
-
-            </div>
-
-
-            <div>
-
-              <span>
-                LEVEL
-              </span>
-
-              <strong>
-                ∞
-              </strong>
-
-            </div>
-
-
-            <div>
-
-              <span>
-                ACCESS
-              </span>
-
-              <strong>
-                GRANTED
-              </strong>
-
-            </div>
+            <p>
+              Anime • Gaming • Code • Digital World
+            </p>
 
           </div>
 
         </div>
 
+
+        <div class="actions">
+
+          <a
+            href="#links"
+            class="btn primary">
+            ENTER SYSTEM
+          </a>
+
+          <a
+            href="#about"
+            class="btn">
+            ABOUT
+          </a>
+
+        </div>
+
       </div>
 
 
-      <button
-        class="back-button"
-        data-back
-      >
-        ← BACK TO HOME
-      </button>
+
+      <!-- ================= TERMINAL ================= -->
+
+      <div class="hero-terminal">
+
+        <div class="terminal-head">
+
+          <span>
+            SENPAI.AC://SYSTEM
+          </span>
+
+          <span>
+            ● ● ●
+          </span>
+
+        </div>
+
+
+        <div class="terminal-body">
+
+          <p>
+            <span>&gt;</span>
+            system.boot
+          </p>
+
+          <p class="dim">
+            initializing senpai.ac...
+          </p>
+
+          <p>
+            <span>&gt;</span>
+            status
+            <b>ONLINE</b>
+          </p>
+
+          <p>
+            <span>&gt;</span>
+            security
+            <b>ACTIVE</b>
+          </p>
+
+          <p>
+            <span>&gt;</span>
+            player
+            <b>RAFSAN</b>
+          </p>
+
+          <p>
+            <span>&gt;</span>
+            clock
+            <b id="terminalClock">--:--:--</b>
+          </p>
+
+          <p>
+            <span>&gt;</span>
+            player.access
+            <b>GRANTED</b>
+          </p>
+
+          <p>
+            <span>&gt;</span>
+            welcome.player
+            <span class="cursor">_</span>
+          </p>
+
+        </div>
+
+      </div>
 
     </section>
 
 
 
-    <!-- ===================================================
-         SOCIAL ROOM
-         =================================================== -->
+    <!-- ================= LIVE CLOCK ================= -->
+
+    <section class="clock-card glass">
+
+      <div>
+
+        <span class="section-label">
+          SYSTEM TIME
+        </span>
+
+        <h2 id="clock">
+          00:00:00
+        </h2>
+
+        <p id="date">
+          Loading...
+        </p>
+
+      </div>
+
+
+      <div class="clock-icon">
+        ◷
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= SOCIAL LINKS ================= -->
 
     <section
-      id="socialRoom"
-      class="room sub-room"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
+      id="links"
+      class="links-section">
 
 
-      <div class="player-corner">
+      <div class="section-heading">
 
-        <span>
-          PLAYER
-        </span>
-
-        <strong>
-          RAFSAN
-        </strong>
-
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          ROOM 02
-        </span>
-
-        <strong>
+        <span class="section-label">
           PLAYER CONNECTIONS
-        </strong>
+        </span>
+
+        <h2>
+          FIND ME ONLINE
+        </h2>
 
       </div>
 
 
-      <div class="social-menu">
+      <div class="link-grid">
 
 
         <!-- INSTAGRAM -->
 
-        <button
-          class="social-option"
-          data-social="instagram"
-        >
+        <a
+          class="link-card glass"
+          href="https://www.instagram.com/_i_am_eren.jeager/"
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <span>
-            01
-          </span>
+          <div class="link-icon">
+            ◎
+          </div>
 
-          <div>
+          <div class="link-info">
 
-            <strong>
+            <span>
               INSTAGRAM
-            </strong>
+            </span>
 
             <small>
               @_i_am_eren.jeager
@@ -447,29 +369,31 @@
 
           </div>
 
-          <b>
+          <span class="arrow">
             ↗
-          </b>
+          </span>
 
-        </button>
+        </a>
+
 
 
         <!-- GITHUB -->
 
-        <button
-          class="social-option"
-          data-social="github"
-        >
+        <a
+          class="link-card glass"
+          href="https://github.com/rafsani533-maker"
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <span>
-            02
-          </span>
+          <div class="link-icon">
+            ◈
+          </div>
 
-          <div>
+          <div class="link-info">
 
-            <strong>
+            <span>
               GITHUB
-            </strong>
+            </span>
 
             <small>
               github.com/rafsani533-maker
@@ -477,29 +401,31 @@
 
           </div>
 
-          <b>
+          <span class="arrow">
             ↗
-          </b>
+          </span>
 
-        </button>
+        </a>
+
 
 
         <!-- YOUTUBE -->
 
-        <button
-          class="social-option"
-          data-social="youtube"
-        >
+        <a
+          class="link-card glass"
+          href="https://youtube.com/@rafsanislam-bc9jk"
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <span>
-            03
-          </span>
+          <div class="link-icon">
+            ▶
+          </div>
 
-          <div>
+          <div class="link-info">
 
-            <strong>
+            <span>
               YOUTUBE
-            </strong>
+            </span>
 
             <small>
               Sickapich by rs.
@@ -507,658 +433,209 @@
 
           </div>
 
-          <b>
+          <span class="arrow">
             ↗
-          </b>
+          </span>
 
-        </button>
+        </a>
+
 
 
         <!-- DISCORD -->
 
-        <button
-          class="social-option"
-          data-social="discord"
-        >
+        <a
+          class="link-card glass"
+          href="#"
+          onclick="return false;">
 
-          <span>
-            04
-          </span>
+          <div class="link-icon">
+            ◉
+          </div>
 
-          <div>
+          <div class="link-info">
 
-            <strong>
+            <span>
               DISCORD
-            </strong>
+            </span>
 
             <small>
-              Coming soon
+              Discord — coming soon
             </small>
 
           </div>
 
-          <b>
+          <span class="arrow">
             ↗
-          </b>
+          </span>
 
-        </button>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-back
-      >
-        ← BACK TO HOME
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         INSTAGRAM DETAIL
-         =================================================== -->
-
-    <section
-      id="instagramRoom"
-      class="room sub-room social-detail"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="detail-number">
-        01
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          SOCIAL CONNECTION
-        </span>
-
-        <strong>
-          INSTAGRAM
-        </strong>
-
-      </div>
-
-
-      <div class="detail-content">
-
-        <small>
-          PLAYER SOCIAL // 01
-        </small>
-
-        <h1>
-          INSTAGRAM
-        </h1>
-
-        <p>
-          Follow RAFSAN and explore the player's
-          anime, gaming and digital world.
-        </p>
-
-
-        <a
-          class="open-social"
-          href="https://www.instagram.com/_i_am_eren.jeager/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          OPEN INSTAGRAM ↗
         </a>
 
+
       </div>
-
-
-      <button
-        class="back-button"
-        data-social-back
-      >
-        ← BACK TO SOCIAL
-      </button>
 
     </section>
 
 
 
-    <!-- ===================================================
-         GITHUB DETAIL
-         =================================================== -->
+    <!-- ================= ABOUT ================= -->
 
     <section
-      id="githubRoom"
-      class="room sub-room social-detail"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
+      id="about"
+      class="about glass">
 
 
-      <div class="detail-number">
-        02
-      </div>
+      <div>
 
-
-      <div class="room-header">
-
-        <span>
-          PLAYER DEVELOPMENT
+        <span class="section-label">
+          PLAYER DATA
         </span>
 
-        <strong>
-          GITHUB
-        </strong>
+        <h2>
+          ABOUT RAFSAN
+        </h2>
 
       </div>
 
 
-      <div class="detail-content">
+      <p>
 
-        <small>
-          PLAYER SOCIAL // 02
-        </small>
+        Welcome to my digital world.
+        Anime, gaming, coding and everything
+        that I enjoy — all in one place.
 
-        <h1>
-          GITHUB
-        </h1>
+      </p>
 
-        <p>
-          Projects, experiments, code and digital
-          creations by RAFSAN.
-        </p>
 
-
-        <a
-          class="open-social"
-          href="https://github.com/rafsani533-maker"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          OPEN GITHUB ↗
-        </a>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-social-back
-      >
-        ← BACK TO SOCIAL
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         YOUTUBE DETAIL
-         =================================================== -->
-
-    <section
-      id="youtubeRoom"
-      class="room sub-room social-detail"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="detail-number">
-        03
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          PLAYER MEDIA
-        </span>
-
-        <strong>
-          YOUTUBE
-        </strong>
-
-      </div>
-
-
-      <div class="detail-content">
-
-        <small>
-          PLAYER SOCIAL // 03
-        </small>
-
-        <h1>
-          YOUTUBE
-        </h1>
-
-        <p>
-          Gaming, edits, anime and other content
-          from RAFSAN.
-        </p>
-
-
-        <a
-          class="open-social"
-          href="https://youtube.com/@rafsanislam-bc9jk"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          OPEN YOUTUBE ↗
-        </a>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-social-back
-      >
-        ← BACK TO SOCIAL
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         DISCORD DETAIL
-         =================================================== -->
-
-    <section
-      id="discordRoom"
-      class="room sub-room social-detail"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="detail-number">
-        04
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          PLAYER CONNECTION
-        </span>
-
-        <strong>
-          DISCORD
-        </strong>
-
-      </div>
-
-
-      <div class="detail-content">
-
-        <small>
-          PLAYER SOCIAL // 04
-        </small>
-
-        <h1>
-          DISCORD
-        </h1>
-
-        <p>
-          The Discord connection is currently
-          unavailable.
-        </p>
-
-
-        <span class="coming-soon">
-          DISCORD // COMING SOON
-        </span>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-social-back
-      >
-        ← BACK TO SOCIAL
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         SYSTEM TIME ROOM
-         =================================================== -->
-
-    <section
-      id="timeRoom"
-      class="room sub-room time-room"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="player-corner">
-
-        <span>
-          PLAYER
-        </span>
-
-        <strong>
-          RAFSAN
-        </strong>
-
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          ROOM 03
-        </span>
-
-        <strong>
-          SYSTEM TIME
-        </strong>
-
-      </div>
-
-
-      <div class="big-clock">
-
-        <div id="bigTime">
-          00:00:00
-        </div>
-
-        <span id="bigDate">
-          LOADING SYSTEM DATE...
-        </span>
-
-      </div>
-
-
-      <div class="system-status">
-
-        <span>
-          LOCAL TIME
-        </span>
-
-        <strong>
-          ACTIVE
-        </strong>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-back
-      >
-        ← BACK TO HOME
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         SYSTEM ROOM
-         =================================================== -->
-
-    <section
-      id="systemRoom"
-      class="room sub-room"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="player-corner">
-
-        <span>
-          PLAYER
-        </span>
-
-        <strong>
-          RAFSAN
-        </strong>
-
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          ROOM 04
-        </span>
-
-        <strong>
-          SYSTEM STATUS
-        </strong>
-
-      </div>
-
-
-      <div class="system-menu">
+      <div class="stats">
 
 
         <div>
 
+          <strong>
+            ∞
+          </strong>
+
           <span>
-            NETWORK
+            PROJECTS
           </span>
 
+        </div>
+
+
+        <div>
+
           <strong>
+            24/7
+          </strong>
+
+          <span>
             ONLINE
-          </strong>
+          </span>
 
         </div>
 
 
         <div>
 
-          <span>
-            SECURITY
-          </span>
-
           <strong>
-            ACTIVE
+            R
           </strong>
+
+          <span>
+            ACCESS LEVEL
+          </span>
 
         </div>
 
-
-        <div>
-
-          <span>
-            PLAYER ACCESS
-          </span>
-
-          <strong>
-            GRANTED
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            SYSTEM
-          </span>
-
-          <strong>
-            STABLE
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            VERSION
-          </span>
-
-          <strong>
-            SENPAI.AC 1.0
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            YEAR
-          </span>
-
-          <strong>
-            2026
-          </strong>
-
-        </div>
 
       </div>
-
-
-      <div class="system-message">
-
-        SENPAI.AC SYSTEM RUNNING NORMAL<br>
-
-        PLAYER CONNECTION ESTABLISHED<br>
-
-        ALL SYSTEMS OPERATIONAL
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-back
-      >
-        ← BACK TO HOME
-      </button>
 
     </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+      <span>
+        senpai.ac // RAFSAN // 2026
+      </span>
+
+      <span>
+        WELCOME TO MY DIGITAL WORLD
+      </span>
+
+    </footer>
+
 
   </main>
 
 
 
-  <!-- =====================================================
-       JAVASCRIPT
-       ===================================================== -->
+  <!-- ================= JAVASCRIPT ================= -->
 
   <script>
 
-    /* =====================================================
-       LOADING SYSTEM
-       ===================================================== */
 
-    const gameLoader =
-      document.getElementById("gameLoader");
+    /* ================= LOADING SCREEN ================= */
 
-    const loaderProgress =
-      document.getElementById("loaderProgress");
+    const loader =
+      document.getElementById("loader");
 
-    const loaderPercent =
-      document.getElementById("loaderPercent");
+    const progressBar =
+      document.getElementById("progressBar");
 
-    const bootText =
-      document.getElementById("bootText");
+    const progressText =
+      document.getElementById("progressText");
 
 
     let progress = 0;
 
 
-    const bootMessages = [
-
-      "INITIALIZING SYSTEM...",
-
-      "LOADING PLAYER DATA...",
-
-      "CONNECTING DIGITAL WORLD...",
-
-      "CHECKING SECURITY...",
-
-      "LOADING SENPAI.AC...",
-
-      "PLAYER ACCESS GRANTED",
-
-      "SYSTEM READY"
-
-    ];
-
-
-    const loaderInterval =
+    const loading =
       setInterval(() => {
 
+
         progress +=
-          Math.floor(Math.random() * 7) + 3;
+          Math.floor(Math.random() * 7) + 4;
 
 
         if (progress >= 100) {
 
           progress = 100;
 
-          clearInterval(loaderInterval);
+          clearInterval(loading);
 
-          bootText.textContent =
-            "SYSTEM READY // ACCESS GRANTED";
 
           setTimeout(() => {
 
-            gameLoader.classList.add("loaded");
+            loader.classList.add("hidden");
 
-          }, 650);
+          }, 500);
 
         }
 
 
-        loaderProgress.style.width =
+        progressBar.style.width =
           progress + "%";
 
 
-        loaderPercent.textContent =
+        progressText.textContent =
           progress + "%";
 
 
-        const messageIndex =
-          Math.min(
-            Math.floor(progress / 15),
-            bootMessages.length - 1
-          );
+      }, 90);
 
 
-        bootText.textContent =
-          bootMessages[messageIndex];
 
-
-      }, 100);
-
-
-    /* =====================================================
-       CLOCK
-       ===================================================== */
+    /* ================= CLOCK ================= */
 
     function updateClock() {
 
-      const now = new Date();
+
+      const now =
+        new Date();
 
 
       const time =
@@ -1185,272 +662,129 @@
         );
 
 
-      const homeTime =
-        document.getElementById("homeTime");
-
-      const homeDate =
-        document.getElementById("homeDate");
-
-      const bigTime =
-        document.getElementById("bigTime");
-
-      const bigDate =
-        document.getElementById("bigDate");
+      document.getElementById(
+        "clock"
+      ).textContent = time;
 
 
-      if (homeTime)
-        homeTime.textContent = time;
+      document.getElementById(
+        "terminalClock"
+      ).textContent = time;
 
 
-      if (homeDate)
-        homeDate.textContent = date;
-
-
-      if (bigTime)
-        bigTime.textContent = time;
-
-
-      if (bigDate)
-        bigDate.textContent = date;
+      document.getElementById(
+        "date"
+      ).textContent = date;
 
     }
 
 
     updateClock();
 
-    setInterval(updateClock, 1000);
-
-
-
-    /* =====================================================
-       ROOM SYSTEM
-       ===================================================== */
-
-    const rooms =
-      document.querySelectorAll(".room");
-
-
-    const menuItems =
-      document.querySelectorAll(".menu-item");
-
-
-    function openRoom(roomId) {
-
-      rooms.forEach(room => {
-
-        room.classList.remove("active");
-
-      });
-
-
-      const target =
-        document.getElementById(roomId);
-
-
-      if (target) {
-
-        target.classList.add("active");
-
-      }
-
-    }
-
-
-
-    /* HOME MENU */
-
-    menuItems.forEach(item => {
-
-      item.addEventListener(
-        "click",
-        () => {
-
-          const room =
-            item.dataset.room;
-
-
-          menuItems.forEach(
-            button =>
-              button.classList.remove(
-                "selected"
-              )
-          );
-
-
-          item.classList.add("selected");
-
-
-          openRoom(room);
-
-        }
-      );
-
-    });
-
-
-
-    /* =====================================================
-       BACK TO HOME
-       ===================================================== */
-
-    const backButtons =
-      document.querySelectorAll(
-        "[data-back]"
-      );
-
-
-    backButtons.forEach(button => {
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          openRoom("homeRoom");
-
-
-          menuItems.forEach(
-            item =>
-              item.classList.remove(
-                "selected"
-              )
-          );
-
-
-          const firstMenu =
-            document.querySelector(
-              '.menu-item[data-room="profileRoom"]'
-            );
-
-
-          if (firstMenu) {
-
-            firstMenu.classList.add(
-              "selected"
-            );
-
-          }
-
-        }
-      );
-
-    });
-
-
-
-    /* =====================================================
-       SOCIAL ROOMS
-       ===================================================== */
-
-    const socialButtons =
-      document.querySelectorAll(
-        "[data-social]"
-      );
-
-
-    const socialRooms = {
-
-      instagram: "instagramRoom",
-
-      github: "githubRoom",
-
-      youtube: "youtubeRoom",
-
-      discord: "discordRoom"
-
-    };
-
-
-    socialButtons.forEach(button => {
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          const social =
-            button.dataset.social;
-
-
-          const room =
-            socialRooms[social];
-
-
-          if (room) {
-
-            openRoom(room);
-
-          }
-
-        }
-      );
-
-    });
-
-
-
-    /* =====================================================
-       SOCIAL BACK
-       ===================================================== */
-
-    const socialBackButtons =
-      document.querySelectorAll(
-        "[data-social-back]"
-      );
-
-
-    socialBackButtons.forEach(button => {
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          openRoom("socialRoom");
-
-        }
-      );
-
-    });
-
-
-
-    /* =====================================================
-       KEYBOARD CONTROLS
-       ===================================================== */
-
-    document.addEventListener(
-      "keydown",
-      event => {
-
-        if (event.key === "Escape") {
-
-          openRoom("homeRoom");
-
-        }
-
-      }
+    setInterval(
+      updateClock,
+      1000
     );
 
 
 
-    /* =====================================================
-       PREVENT EMPTY DISCORD LINK
-       ===================================================== */
+    /* ================= SMOOTH SCROLL ================= */
 
     document
       .querySelectorAll(
-        'a[href="#"]'
+        'a[href^="#"]'
       )
       .forEach(link => {
+
 
         link.addEventListener(
           "click",
           event => {
 
-            event.preventDefault();
+
+            const target =
+              document.querySelector(
+                link.getAttribute("href")
+              );
+
+
+            if (target) {
+
+              event.preventDefault();
+
+              target.scrollIntoView({
+                behavior: "smooth"
+              });
+
+            }
 
           }
         );
 
       });
+
+
+
+    /* ================= GAME CARD MOVEMENT ================= */
+
+    document
+      .querySelectorAll(".link-card")
+      .forEach(card => {
+
+
+        card.addEventListener(
+          "mousemove",
+          event => {
+
+
+            if (
+              window.innerWidth < 800
+            ) return;
+
+
+            const rect =
+              card.getBoundingClientRect();
+
+
+            const x =
+              event.clientX -
+              rect.left;
+
+
+            const y =
+              event.clientY -
+              rect.top;
+
+
+            const rotateY =
+              ((x / rect.width) - 0.5) * 5;
+
+
+            const rotateX =
+              ((y / rect.height) - 0.5) * -5;
+
+
+            card.style.transform =
+              `perspective(700px)
+               rotateX(${rotateX}deg)
+               rotateY(${rotateY}deg)
+               translateY(-3px)`;
+
+          }
+        );
+
+
+        card.addEventListener(
+          "mouseleave",
+          () => {
+
+            card.style.transform = "";
+
+          }
+        );
+
+      });
+
 
   </script>
 
