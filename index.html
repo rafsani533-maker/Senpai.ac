@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#05070d">
+  <meta name="description" content="senpai.ac — futuristic anime gaming profile">
+  <title>senpai.ac</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= GAMING LOADING SCREEN ================= -->
+  <div id="loader" class="loader">
+    <div class="loader-grid"></div>
+    <div class="loader-content">
+      <div class="loader-symbol">S</div>
+      <div class="loader-label">SENPAI.AC // SYSTEM BOOT</div>
+      <div class="progress-wrap">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+      <div id="progressText" class="progress-text">0%</div>
+    </div>
+  </div>
+
+  <!-- YOUR UPLOADED IMAGE IS THE REAL BACKGROUND -->
+  <div class="bg"></div>
+  <div class="bg-overlay"></div>
+  <div class="scanlines"></div>
+
+  <main class="page">
+
+    <!-- ================= TOP HUD ================= -->
+    <header class="topbar glass">
+      <div class="brand">
+        <span class="brand-mark">S</span>
+        <div>
+          <strong>senpai.ac</strong>
+          <small>ANIME // GAMING // DIGITAL SPACE</small>
+        </div>
+      </div>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        <span>ONLINE</span>
+      </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero glass">
+
+      <div class="hero-content">
+        <div class="eyebrow">SENPAI.AC // ACCESS GRANTED</div>
+
+        <h1>
+          WELCOME TO<br>
+          <span>senpai.ac</span>
+        </h1>
+
+        <p class="intro">
+          Welcome to my digital space — anime, gaming, code and everything
+          inside my world.
+        </p>
+
+        <div class="profile-row">
+          <div class="avatar">S</div>
+
+          <div>
+            <h2>YOUR NAME</h2>
+            <p>Anime • Gaming • Code • Digital World</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a href="#links" class="btn primary">ENTER SYSTEM</a>
+          <a href="#about" class="btn">ABOUT</a>
+        </div>
+      </div>
+
+      <!-- GAME-LIKE TERMINAL -->
+      <div class="hero-terminal">
+        <div class="terminal-head">
+          <span>SENPAI.AC://SYSTEM</span>
+          <span>● ● ●</span>
+        </div>
+
+        <div class="terminal-body">
+          <p><span>&gt;</span> system.boot</p>
+          <p class="dim">initializing senpai.ac...</p>
+          <p><span>&gt;</span> status <b>ONLINE</b></p>
+          <p><span>&gt;</span> security <b>ACTIVE</b></p>
+          <p><span>&gt;</span> clock <b id="terminalClock">--:--:--</b></p>
+          <p><span>&gt;</span> player.access <b>GRANTED</b></p>
+          <p><span>&gt;</span> welcome.player<span class="cursor">_</span></p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= LIVE CLOCK ================= -->
+    <section class="clock-card glass">
+      <div>
+        <span class="section-label">SYSTEM TIME</span>
+        <h2 id="clock">00:00:00</h2>
+        <p id="date">Loading...</p>
+      </div>
+
+      <div class="clock-icon">◷</div>
+    </section>
+
+    <!-- ================= SOCIAL LINKS ================= -->
+    <section id="links" class="links-section">
+
+      <div class="section-heading">
+        <span class="section-label">PLAYER CONNECTIONS</span>
+        <h2>FIND ME ONLINE</h2>
+      </div>
+
+      <div class="link-grid">
+
+        <!-- INSTAGRAM: CHANGE ONLY THE URL BELOW -->
+        <a class="link-card glass" href="https://instagram.com/YOUR_USERNAME"
+           target="_blank" rel="noopener noreferrer">
+          <div class="link-icon">◎</div>
+          <div class="link-info">
+            <span>INSTAGRAM</span>
+            <small>@YOUR_USERNAME</small>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <!-- GITHUB: CHANGE ONLY THE URL BELOW -->
+        <a class="link-card glass" href="https://github.com/YOUR_USERNAME"
+           target="_blank" rel="noopener noreferrer">
+          <div class="link-icon">◈</div>
+          <div class="link-info">
+            <span>GITHUB</span>
+            <small>github.com/YOUR_USERNAME</small>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <!-- YOUTUBE: CHANGE ONLY THE URL BELOW -->
+        <a class="link-card glass" href="https://youtube.com/@YOUR_CHANNEL"
+           target="_blank" rel="noopener noreferrer">
+          <div class="link-icon">▶</div>
+          <div class="link-info">
+            <span>YOUTUBE</span>
+            <small>Your channel</small>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <!-- DISCORD: CHANGE ONLY THE URL BELOW -->
+        <a class="link-card glass" href="https://discord.com/users/YOUR_ID"
+           target="_blank" rel="noopener noreferrer">
+          <div class="link-icon">◉</div>
+          <div class="link-info">
+            <span>DISCORD</span>
+            <small>My Discord</small>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="about glass">
+      <div>
+        <span class="section-label">PLAYER DATA</span>
+        <h2>ABOUT ME</h2>
+      </div>
+
+      <p>
+        Replace this text with your own introduction. Tell visitors who you
+        are, what you like, what you create, or anything you want them to know.
+      </p>
+
+      <div class="stats">
+        <div><strong>∞</strong><span>PROJECTS</span></div>
+        <div><strong>24/7</strong><span>ONLINE</span></div>
+        <div><strong>S</strong><span>ACCESS LEVEL</span></div>
+      </div>
+    </section>
+
+    <footer>
+      <span>senpai.ac // 2026</span>
+      <span>WELCOME TO MY DIGITAL WORLD</span>
+    </footer>
+
+  </main>
+
+  <!-- ================= SCRIPT.JS INSIDE INDEX.HTML ================= -->
+  <script>
+    // Gaming-style loading screen
+    const loader = document.getElementById("loader");
+    const progressBar = document.getElementById("progressBar");
+    const progressText = document.getElementById("progressText");
+
+    let progress = 0;
+
+    const loading = setInterval(() => {
+      progress += Math.floor(Math.random() * 7) + 4;
+
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(loading);
+
+        setTimeout(() => {
+          loader.classList.add("hidden");
+        }, 400);
+      }
+
+      progressBar.style.width = progress + "%";
+      progressText.textContent = progress + "%";
+    }, 90);
+
+    // Live system clock
+    function updateClock() {
+      const now = new Date();
+
+      const time = now.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false
+      });
+
+      const date = now.toLocaleDateString([], {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+
+      document.getElementById("clock").textContent = time;
+      document.getElementById("terminalClock").textContent = time;
+      document.getElementById("date").textContent = date;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", event => {
+        const target = document.querySelector(link.getAttribute("href"));
+
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+
+    // Desktop game-card movement
+    document.querySelectorAll(".link-card").forEach(card => {
+      card.addEventListener("mousemove", event => {
+        if (window.innerWidth < 800) return;
+
+        const rect = card.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        const rotateY = ((x / rect.width) - 0.5) * 5;
+        const rotateX = ((y / rect.height) - 0.5) * -5;
+
+        card.style.transform =
+          `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "";
+      });
+    });
+  </script>
+
+</body>
+</html>
