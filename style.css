@@ -1,1459 +1,643 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="theme-color"
-    content="#03050a"
-  >
-
-  <meta
-    name="description"
-    content="RAFSAN // SENPAI.AC futuristic anime gaming digital space"
-  >
-
-  <title>RAFSAN // senpai.ac</title>
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-
-<body>
-
-  <!-- =====================================================
-       GLOBAL BACKGROUND
-       ===================================================== -->
-
-  <div class="bg"></div>
-
-  <div class="bg-overlay"></div>
-
-  <div class="scanlines"></div>
-
-
-  <!-- =====================================================
-       GAME LOADING SCREEN
-       ===================================================== -->
-
-  <div
-    id="gameLoader"
-    class="game-loader"
-  >
-
-    <div class="loader-ui">
-
-      <div class="loader-small">
-        SENPAI.AC // SYSTEM INITIALIZATION
-      </div>
-
-
-      <div class="loader-title">
-
-        <div class="loader-s">
-          S
-        </div>
-
-        <h1>
-          SENPAI.AC
-        </h1>
-
-        <span>
-          DIGITAL WORLD // ACCESS SYSTEM
-        </span>
-
-      </div>
-
-
-      <div class="loader-status">
-
-        <div id="bootText">
-          BOOTING SYSTEM...
-        </div>
-
-        <div class="loader-line">
-
-          <div
-            id="loaderProgress"
-            class="loader-progress"
-          ></div>
-
-        </div>
-
-
-        <div class="loader-percent">
-
-          <span>
-            SYSTEM BOOT
-          </span>
-
-          <span id="loaderPercent">
-            0%
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- PLAYER CORNER -->
-
-    <div class="loader-player">
-
-      <small>
-        PLAYER
-      </small>
-
-      <strong>
-        RAFSAN
-      </strong>
-
-    </div>
-
-
-    <div class="loader-version">
-      BUILD 2026 // v1.0
-    </div>
-
-  </div>
-
-
-
-  <!-- =====================================================
-       GAME WORLD
-       ===================================================== -->
-
-  <main id="game">
-
-
-    <!-- ===================================================
-         HOME ROOM
-         =================================================== -->
-
-    <section
-      id="homeRoom"
-      class="room active"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <!-- PLAYER -->
-
-      <div class="player-corner">
-
-        <span>
-          PLAYER
-        </span>
-
-        <strong>
-          RAFSAN
-        </strong>
-
-      </div>
-
-
-      <!-- DIGITAL CLOCK -->
-
-      <div class="digital-time">
-
-        <div id="homeTime">
-          00:00:00
-        </div>
-
-        <small id="homeDate">
-          SYSTEM DATE
-        </small>
-
-      </div>
-
-
-      <!-- MAIN TITLE -->
-
-      <div class="home-center">
-
-        <div class="mini-label">
-          SENPAI.AC // ACCESS GRANTED
-        </div>
-
-        <h1>
-          RAFSAN
-        </h1>
-
-        <p>
-          ANIME // GAMING // CODE // DIGITAL WORLD
-        </p>
-
-      </div>
-
-
-      <!-- GAME MENU -->
-
-      <nav class="game-menu">
-
-        <button
-          class="menu-item selected"
-          data-room="profileRoom"
-        >
-          <span>01</span>
-          PROFILE
-        </button>
-
-
-        <button
-          class="menu-item"
-          data-room="socialRoom"
-        >
-          <span>02</span>
-          SOCIAL
-        </button>
-
-
-        <button
-          class="menu-item"
-          data-room="timeRoom"
-        >
-          <span>03</span>
-          SYSTEM TIME
-        </button>
-
-
-        <button
-          class="menu-item"
-          data-room="systemRoom"
-        >
-          <span>04</span>
-          SYSTEM
-        </button>
-
-      </nav>
-
-
-      <div class="home-hint">
-        SELECT // ENTER SYSTEM
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         PROFILE ROOM
-         =================================================== -->
-
-    <section
-      id="profileRoom"
-      class="room sub-room"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="player-corner">
-
-        <span>
-          PLAYER
-        </span>
-
-        <strong>
-          RAFSAN
-        </strong>
-
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          ROOM 01
-        </span>
-
-        <strong>
-          PLAYER PROFILE
-        </strong>
-
-      </div>
-
-
-      <div class="profile-room">
-
-
-        <div class="profile-symbol">
-          R
-        </div>
-
-
-        <div class="profile-content">
-
-          <small>
-            PLAYER IDENTIFICATION
-          </small>
-
-          <h1>
-            RAFSAN
-          </h1>
-
-          <p>
-            Anime enthusiast // Gamer // Developer
-          </p>
-
-
-          <div class="profile-data">
-
-            <div>
-
-              <span>
-                STATUS
-              </span>
-
-              <strong>
-                ONLINE
-              </strong>
-
-            </div>
-
-
-            <div>
-
-              <span>
-                CLASS
-              </span>
-
-              <strong>
-                CREATOR
-              </strong>
-
-            </div>
-
-
-            <div>
-
-              <span>
-                LEVEL
-              </span>
-
-              <strong>
-                ∞
-              </strong>
-
-            </div>
-
-
-            <div>
-
-              <span>
-                ACCESS
-              </span>
-
-              <strong>
-                GRANTED
-              </strong>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-back
-      >
-        ← BACK TO HOME
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         SOCIAL ROOM
-         =================================================== -->
-
-    <section
-      id="socialRoom"
-      class="room sub-room"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="player-corner">
-
-        <span>
-          PLAYER
-        </span>
-
-        <strong>
-          RAFSAN
-        </strong>
-
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          ROOM 02
-        </span>
-
-        <strong>
-          PLAYER CONNECTIONS
-        </strong>
-
-      </div>
-
-
-      <div class="social-menu">
-
-
-        <!-- INSTAGRAM -->
-
-        <button
-          class="social-option"
-          data-social="instagram"
-        >
-
-          <span>
-            01
-          </span>
-
-          <div>
-
-            <strong>
-              INSTAGRAM
-            </strong>
-
-            <small>
-              @_i_am_eren.jeager
-            </small>
-
-          </div>
-
-          <b>
-            ↗
-          </b>
-
-        </button>
-
-
-        <!-- GITHUB -->
-
-        <button
-          class="social-option"
-          data-social="github"
-        >
-
-          <span>
-            02
-          </span>
-
-          <div>
-
-            <strong>
-              GITHUB
-            </strong>
-
-            <small>
-              github.com/rafsani533-maker
-            </small>
-
-          </div>
-
-          <b>
-            ↗
-          </b>
-
-        </button>
-
-
-        <!-- YOUTUBE -->
-
-        <button
-          class="social-option"
-          data-social="youtube"
-        >
-
-          <span>
-            03
-          </span>
-
-          <div>
-
-            <strong>
-              YOUTUBE
-            </strong>
-
-            <small>
-              Sickapich by rs.
-            </small>
-
-          </div>
-
-          <b>
-            ↗
-          </b>
-
-        </button>
-
-
-        <!-- DISCORD -->
-
-        <button
-          class="social-option"
-          data-social="discord"
-        >
-
-          <span>
-            04
-          </span>
-
-          <div>
-
-            <strong>
-              DISCORD
-            </strong>
-
-            <small>
-              Coming soon
-            </small>
-
-          </div>
-
-          <b>
-            ↗
-          </b>
-
-        </button>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-back
-      >
-        ← BACK TO HOME
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         INSTAGRAM DETAIL
-         =================================================== -->
-
-    <section
-      id="instagramRoom"
-      class="room sub-room social-detail"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="detail-number">
-        01
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          SOCIAL CONNECTION
-        </span>
-
-        <strong>
-          INSTAGRAM
-        </strong>
-
-      </div>
-
-
-      <div class="detail-content">
-
-        <small>
-          PLAYER SOCIAL // 01
-        </small>
-
-        <h1>
-          INSTAGRAM
-        </h1>
-
-        <p>
-          Follow RAFSAN and explore the player's
-          anime, gaming and digital world.
-        </p>
-
-
-        <a
-          class="open-social"
-          href="https://www.instagram.com/_i_am_eren.jeager/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          OPEN INSTAGRAM ↗
-        </a>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-social-back
-      >
-        ← BACK TO SOCIAL
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         GITHUB DETAIL
-         =================================================== -->
-
-    <section
-      id="githubRoom"
-      class="room sub-room social-detail"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="detail-number">
-        02
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          PLAYER DEVELOPMENT
-        </span>
-
-        <strong>
-          GITHUB
-        </strong>
-
-      </div>
-
-
-      <div class="detail-content">
-
-        <small>
-          PLAYER SOCIAL // 02
-        </small>
-
-        <h1>
-          GITHUB
-        </h1>
-
-        <p>
-          Projects, experiments, code and digital
-          creations by RAFSAN.
-        </p>
-
-
-        <a
-          class="open-social"
-          href="https://github.com/rafsani533-maker"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          OPEN GITHUB ↗
-        </a>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-social-back
-      >
-        ← BACK TO SOCIAL
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         YOUTUBE DETAIL
-         =================================================== -->
-
-    <section
-      id="youtubeRoom"
-      class="room sub-room social-detail"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="detail-number">
-        03
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          PLAYER MEDIA
-        </span>
-
-        <strong>
-          YOUTUBE
-        </strong>
-
-      </div>
-
-
-      <div class="detail-content">
-
-        <small>
-          PLAYER SOCIAL // 03
-        </small>
-
-        <h1>
-          YOUTUBE
-        </h1>
-
-        <p>
-          Gaming, edits, anime and other content
-          from RAFSAN.
-        </p>
-
-
-        <a
-          class="open-social"
-          href="https://youtube.com/@rafsanislam-bc9jk"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          OPEN YOUTUBE ↗
-        </a>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-social-back
-      >
-        ← BACK TO SOCIAL
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         DISCORD DETAIL
-         =================================================== -->
-
-    <section
-      id="discordRoom"
-      class="room sub-room social-detail"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="detail-number">
-        04
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          PLAYER CONNECTION
-        </span>
-
-        <strong>
-          DISCORD
-        </strong>
-
-      </div>
-
-
-      <div class="detail-content">
-
-        <small>
-          PLAYER SOCIAL // 04
-        </small>
-
-        <h1>
-          DISCORD
-        </h1>
-
-        <p>
-          The Discord connection is currently
-          unavailable.
-        </p>
-
-
-        <span class="coming-soon">
-          DISCORD // COMING SOON
-        </span>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-social-back
-      >
-        ← BACK TO SOCIAL
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         SYSTEM TIME ROOM
-         =================================================== -->
-
-    <section
-      id="timeRoom"
-      class="room sub-room time-room"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="player-corner">
-
-        <span>
-          PLAYER
-        </span>
-
-        <strong>
-          RAFSAN
-        </strong>
-
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          ROOM 03
-        </span>
-
-        <strong>
-          SYSTEM TIME
-        </strong>
-
-      </div>
-
-
-      <div class="big-clock">
-
-        <div id="bigTime">
-          00:00:00
-        </div>
-
-        <span id="bigDate">
-          LOADING SYSTEM DATE...
-        </span>
-
-      </div>
-
-
-      <div class="system-status">
-
-        <span>
-          LOCAL TIME
-        </span>
-
-        <strong>
-          ACTIVE
-        </strong>
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-back
-      >
-        ← BACK TO HOME
-      </button>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         SYSTEM ROOM
-         =================================================== -->
-
-    <section
-      id="systemRoom"
-      class="room sub-room"
-    >
-
-      <div class="room-background"></div>
-
-      <div class="room-overlay"></div>
-
-
-      <div class="player-corner">
-
-        <span>
-          PLAYER
-        </span>
-
-        <strong>
-          RAFSAN
-        </strong>
-
-      </div>
-
-
-      <div class="room-header">
-
-        <span>
-          ROOM 04
-        </span>
-
-        <strong>
-          SYSTEM STATUS
-        </strong>
-
-      </div>
-
-
-      <div class="system-menu">
-
-
-        <div>
-
-          <span>
-            NETWORK
-          </span>
-
-          <strong>
-            ONLINE
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            SECURITY
-          </span>
-
-          <strong>
-            ACTIVE
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            PLAYER ACCESS
-          </span>
-
-          <strong>
-            GRANTED
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            SYSTEM
-          </span>
-
-          <strong>
-            STABLE
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            VERSION
-          </span>
-
-          <strong>
-            SENPAI.AC 1.0
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            YEAR
-          </span>
-
-          <strong>
-            2026
-          </strong>
-
-        </div>
-
-      </div>
-
-
-      <div class="system-message">
-
-        SENPAI.AC SYSTEM RUNNING NORMAL<br>
-
-        PLAYER CONNECTION ESTABLISHED<br>
-
-        ALL SYSTEMS OPERATIONAL
-
-      </div>
-
-
-      <button
-        class="back-button"
-        data-back
-      >
-        ← BACK TO HOME
-      </button>
-
-    </section>
-
-  </main>
-
-
-
-  <!-- =====================================================
-       JAVASCRIPT
-       ===================================================== -->
-
-  <script>
-
-    /* =====================================================
-       LOADING SYSTEM
-       ===================================================== */
-
-    const gameLoader =
-      document.getElementById("gameLoader");
-
-    const loaderProgress =
-      document.getElementById("loaderProgress");
-
-    const loaderPercent =
-      document.getElementById("loaderPercent");
-
-    const bootText =
-      document.getElementById("bootText");
-
-
-    let progress = 0;
-
-
-    const bootMessages = [
-
-      "INITIALIZING SYSTEM...",
-
-      "LOADING PLAYER DATA...",
-
-      "CONNECTING DIGITAL WORLD...",
-
-      "CHECKING SECURITY...",
-
-      "LOADING SENPAI.AC...",
-
-      "PLAYER ACCESS GRANTED",
-
-      "SYSTEM READY"
-
-    ];
-
-
-    const loaderInterval =
-      setInterval(() => {
-
-        progress +=
-          Math.floor(Math.random() * 7) + 3;
-
-
-        if (progress >= 100) {
-
-          progress = 100;
-
-          clearInterval(loaderInterval);
-
-          bootText.textContent =
-            "SYSTEM READY // ACCESS GRANTED";
-
-          setTimeout(() => {
-
-            gameLoader.classList.add("loaded");
-
-          }, 650);
-
-        }
-
-
-        loaderProgress.style.width =
-          progress + "%";
-
-
-        loaderPercent.textContent =
-          progress + "%";
-
-
-        const messageIndex =
-          Math.min(
-            Math.floor(progress / 15),
-            bootMessages.length - 1
-          );
-
-
-        bootText.textContent =
-          bootMessages[messageIndex];
-
-
-      }, 100);
-
-
-    /* =====================================================
-       CLOCK
-       ===================================================== */
-
-    function updateClock() {
-
-      const now = new Date();
-
-
-      const time =
-        now.toLocaleTimeString(
-          [],
-          {
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit",
-            hour12: false
-          }
-        );
-
-
-      const date =
-        now.toLocaleDateString(
-          [],
-          {
-            weekday: "long",
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-          }
-        );
-
-
-      const homeTime =
-        document.getElementById("homeTime");
-
-      const homeDate =
-        document.getElementById("homeDate");
-
-      const bigTime =
-        document.getElementById("bigTime");
-
-      const bigDate =
-        document.getElementById("bigDate");
-
-
-      if (homeTime)
-        homeTime.textContent = time;
-
-
-      if (homeDate)
-        homeDate.textContent = date;
-
-
-      if (bigTime)
-        bigTime.textContent = time;
-
-
-      if (bigDate)
-        bigDate.textContent = date;
-
-    }
-
-
-    updateClock();
-
-    setInterval(updateClock, 1000);
-
-
-
-    /* =====================================================
-       ROOM SYSTEM
-       ===================================================== */
-
-    const rooms =
-      document.querySelectorAll(".room");
-
-
-    const menuItems =
-      document.querySelectorAll(".menu-item");
-
-
-    function openRoom(roomId) {
-
-      rooms.forEach(room => {
-
-        room.classList.remove("active");
-
-      });
-
-
-      const target =
-        document.getElementById(roomId);
-
-
-      if (target) {
-
-        target.classList.add("active");
-
-      }
-
-    }
-
-
-
-    /* HOME MENU */
-
-    menuItems.forEach(item => {
-
-      item.addEventListener(
-        "click",
-        () => {
-
-          const room =
-            item.dataset.room;
-
-
-          menuItems.forEach(
-            button =>
-              button.classList.remove(
-                "selected"
-              )
-          );
-
-
-          item.classList.add("selected");
-
-
-          openRoom(room);
-
-        }
-      );
-
-    });
-
-
-
-    /* =====================================================
-       BACK TO HOME
-       ===================================================== */
-
-    const backButtons =
-      document.querySelectorAll(
-        "[data-back]"
-      );
-
-
-    backButtons.forEach(button => {
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          openRoom("homeRoom");
-
-
-          menuItems.forEach(
-            item =>
-              item.classList.remove(
-                "selected"
-              )
-          );
-
-
-          const firstMenu =
-            document.querySelector(
-              '.menu-item[data-room="profileRoom"]'
-            );
-
-
-          if (firstMenu) {
-
-            firstMenu.classList.add(
-              "selected"
-            );
-
-          }
-
-        }
-      );
-
-    });
-
-
-
-    /* =====================================================
-       SOCIAL ROOMS
-       ===================================================== */
-
-    const socialButtons =
-      document.querySelectorAll(
-        "[data-social]"
-      );
-
-
-    const socialRooms = {
-
-      instagram: "instagramRoom",
-
-      github: "githubRoom",
-
-      youtube: "youtubeRoom",
-
-      discord: "discordRoom"
-
-    };
-
-
-    socialButtons.forEach(button => {
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          const social =
-            button.dataset.social;
-
-
-          const room =
-            socialRooms[social];
-
-
-          if (room) {
-
-            openRoom(room);
-
-          }
-
-        }
-      );
-
-    });
-
-
-
-    /* =====================================================
-       SOCIAL BACK
-       ===================================================== */
-
-    const socialBackButtons =
-      document.querySelectorAll(
-        "[data-social-back]"
-      );
-
-
-    socialBackButtons.forEach(button => {
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          openRoom("socialRoom");
-
-        }
-      );
-
-    });
-
-
-
-    /* =====================================================
-       KEYBOARD CONTROLS
-       ===================================================== */
-
-    document.addEventListener(
-      "keydown",
-      event => {
-
-        if (event.key === "Escape") {
-
-          openRoom("homeRoom");
-
-        }
-
-      }
-    );
-
-
-
-    /* =====================================================
-       PREVENT EMPTY DISCORD LINK
-       ===================================================== */
-
-    document
-      .querySelectorAll(
-        'a[href="#"]'
-      )
-      .forEach(link => {
-
-        link.addEventListener(
-          "click",
-          event => {
-
-            event.preventDefault();
-
-          }
-        );
-
-      });
-
-  </script>
-
-</body>
-
-</html>
+/* =========================================================
+   ACCESS // FUTURISTIC ANIME / CYBER UI
+   Background image: background.jpeg
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #05070d;
+  --text: #f3f7ff;
+  --muted: #9aa5b7;
+  --line: rgba(170, 220, 255, 0.16);
+  --cyan: #58f6ff;
+  --cyan-soft: rgba(88, 246, 255, 0.18);
+  --purple: #a78bfa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Background */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -4;
+  background-image: url("background.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.75) contrast(1.05);
+  transform: scale(1.03);
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  background:
+    linear-gradient(90deg, rgba(2, 5, 12, 0.93), rgba(2, 7, 14, 0.55), rgba(2, 5, 12, 0.88)),
+    linear-gradient(180deg, rgba(3, 8, 15, 0.55), rgba(3, 6, 13, 0.92));
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.08;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    #bdfcff 4px
+  );
+}
+
+/* Loading screen */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: #04060b;
+  transition: opacity 0.55s ease, visibility 0.55s ease;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(88, 246, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 246, 255, 0.08) 1px, transparent 1px);
+  background-size: 45px 45px;
+}
+
+.loader-content {
+  width: min(420px, 80vw);
+  text-align: center;
+  position: relative;
+}
+
+.loader-symbol {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 25px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--cyan);
+  box-shadow: 0 0 35px var(--cyan-soft), inset 0 0 25px var(--cyan-soft);
+  color: var(--cyan);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.loader-label {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #dceeff;
+  margin-bottom: 18px;
+}
+
+.progress-wrap {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: var(--cyan);
+  box-shadow: 0 0 18px var(--cyan);
+  transition: width 0.12s linear;
+}
+
+.progress-text {
+  margin-top: 10px;
+  color: var(--cyan);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+/* Layout */
+.page {
+  width: min(1120px, calc(100% - 32px));
+  margin: auto;
+  padding: 22px 0 40px;
+}
+
+.glass {
+  background: rgba(7, 13, 23, 0.67);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 18px 70px rgba(0, 0, 0, 0.28);
+}
+
+/* Topbar */
+.topbar {
+  min-height: 68px;
+  border-radius: 18px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  font-weight: 900;
+  box-shadow: 0 0 20px var(--cyan-soft);
+}
+
+.brand strong {
+  display: block;
+  letter-spacing: 4px;
+  font-size: 14px;
+}
+
+.brand small {
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b9c8d9;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #62ffb0;
+  box-shadow: 0 0 12px #62ffb0;
+}
+
+/* Hero */
+.hero {
+  min-height: 570px;
+  border-radius: 24px;
+  padding: clamp(28px, 5vw, 65px);
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 40px;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  right: -170px;
+  top: -170px;
+  border-radius: 50%;
+  background: var(--cyan-soft);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.eyebrow,
+.section-label {
+  color: var(--cyan);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 7vw, 82px);
+  line-height: 0.92;
+  letter-spacing: -4px;
+  margin: 16px 0 24px;
+  text-shadow: 0 0 30px rgba(88, 246, 255, 0.08);
+}
+
+.hero h1 span {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+}
+
+.intro {
+  max-width: 590px;
+  color: #aeb9c9;
+  line-height: 1.75;
+  font-size: 14px;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 28px 0;
+}
+
+.avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  background: rgba(88, 246, 255, 0.08);
+  box-shadow: 0 0 22px var(--cyan-soft);
+}
+
+.profile-row h2 {
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+.profile-row p {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 0 20px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: #dce8f5;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  transform: translateY(-2px);
+}
+
+.btn.primary {
+  color: #061016;
+  background: var(--cyan);
+  border-color: var(--cyan);
+  box-shadow: 0 0 25px var(--cyan-soft);
+}
+
+.btn.primary:hover {
+  color: #061016;
+  box-shadow: 0 0 40px rgba(88, 246, 255, 0.35);
+}
+
+/* Terminal */
+.hero-terminal {
+  border: 1px solid rgba(88, 246, 255, 0.22);
+  background: rgba(1, 5, 11, 0.65);
+  min-height: 275px;
+  box-shadow: inset 0 0 40px rgba(88, 246, 255, 0.03);
+}
+
+.terminal-head {
+  height: 42px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  color: #8ca0b4;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.terminal-body {
+  padding: 22px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 11px;
+  line-height: 2.15;
+  color: #b9cadb;
+}
+
+.terminal-body p span {
+  color: var(--cyan);
+}
+
+.terminal-body .dim {
+  color: #617184;
+}
+
+.terminal-body b {
+  color: #77ffbf;
+  font-weight: 500;
+}
+
+.cursor {
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Clock */
+.clock-card {
+  margin-top: 18px;
+  border-radius: 18px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clock-card h2 {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: clamp(30px, 5vw, 48px);
+  letter-spacing: 3px;
+  margin: 8px 0;
+}
+
+.clock-card p {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.clock-icon {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  color: var(--cyan);
+  font-size: 30px;
+}
+
+/* Sections */
+.links-section,
+.about {
+  margin-top: 65px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2,
+.about h2 {
+  margin-top: 7px;
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.link-card {
+  min-height: 92px;
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.18s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.link-card:hover {
+  border-color: rgba(88, 246, 255, 0.55);
+  background: rgba(10, 22, 34, 0.78);
+}
+
+.link-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  font-size: 21px;
+  color: var(--cyan);
+}
+
+.link-info {
+  flex: 1;
+}
+
+.link-info span {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.link-info small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.arrow {
+  color: #77879b;
+  font-size: 20px;
+  transition: 0.2s ease;
+}
+
+.link-card:hover .arrow {
+  color: var(--cyan);
+  transform: translate(3px, -3px);
+}
+
+/* About */
+.about {
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.about > p {
+  max-width: 780px;
+  color: #9faabd;
+  line-height: 1.8;
+  font-size: 13px;
+  margin: 20px 0 26px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+}
+
+.stats div {
+  padding: 20px 12px 5px;
+  border-right: 1px solid var(--line);
+}
+
+.stats div:last-child {
+  border-right: 0;
+}
+
+.stats strong {
+  display: block;
+  font-size: 22px;
+  color: var(--cyan);
+}
+
+.stats span {
+  display: block;
+  margin-top: 5px;
+  color: #6f7f92;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+/* Footer */
+footer {
+  padding: 35px 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  color: #566476;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+/* Mobile */
+@media (max-width: 820px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-terminal {
+    min-height: 235px;
+  }
+
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .page {
+    width: min(100% - 20px, 1120px);
+    padding-top: 10px;
+  }
+
+  .topbar {
+    border-radius: 14px;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .hero {
+    border-radius: 18px;
+    padding: 28px 20px;
+    gap: 28px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+    letter-spacing: -2px;
+  }
+
+  .intro {
+    font-size: 13px;
+  }
+
+  .profile-row {
+    margin: 22px 0;
+  }
+
+  .hero-terminal {
+    min-height: 215px;
+  }
+
+  .clock-card {
+    padding: 20px;
+  }
+
+  .clock-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 23px;
+  }
+
+  .links-section,
+  .about {
+    margin-top: 48px;
+  }
+
+  .about {
+    padding: 23px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
