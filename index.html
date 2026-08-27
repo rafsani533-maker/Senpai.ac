@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -12,1124 +11,1448 @@
 
   <meta
     name="theme-color"
-    content="#05070d"
+    content="#03050a"
   >
 
   <meta
     name="description"
-    content="RAFSAN // SENPAI.AC — Anime, Gaming & Digital World"
+    content="RAFSAN // SENPAI.AC futuristic anime gaming digital space"
   >
 
-  <title>SENPAI.AC // RAFSAN</title>
-
-  <!--
-    IMPORTANT:
-    Background image is NOT placed here.
-
-    Your existing style.css already contains
-    the background image, so this HTML simply
-    uses that CSS.
-  -->
+  <title>RAFSAN // senpai.ac</title>
 
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 
 <body>
 
+  <!-- =====================================================
+       GLOBAL BACKGROUND
+       ===================================================== -->
 
-<!-- =====================================================
-     GAME LOADING SCREEN
-     ===================================================== -->
+  <div class="bg"></div>
 
-<div id="loader" class="game-loader">
+  <div class="bg-overlay"></div>
 
-  <div class="loader-image"></div>
-
-  <div class="loader-dark"></div>
-
-  <div class="loader-scan"></div>
+  <div class="scanlines"></div>
 
 
-  <div class="loader-ui">
+  <!-- =====================================================
+       GAME LOADING SCREEN
+       ===================================================== -->
 
-    <div class="loader-small">
-      SENPAI.AC // SYSTEM
-    </div>
+  <div
+    id="gameLoader"
+    class="game-loader"
+  >
 
+    <div class="loader-ui">
 
-    <div class="loader-title">
-
-      <div class="loader-s">
-        S
+      <div class="loader-small">
+        SENPAI.AC // SYSTEM INITIALIZATION
       </div>
 
-      <h1>
-        SENPAI.AC
-      </h1>
 
-      <span>
-        DIGITAL WORLD
-      </span>
+      <div class="loader-title">
 
-    </div>
+        <div class="loader-s">
+          S
+        </div>
 
+        <h1>
+          SENPAI.AC
+        </h1>
 
-    <div class="loader-status">
-
-      <div id="bootText">
-        INITIALIZING WORLD...
-      </div>
-
-      <div class="loader-line">
-
-        <div
-          id="bootProgress"
-          class="loader-progress"
-        ></div>
+        <span>
+          DIGITAL WORLD // ACCESS SYSTEM
+        </span>
 
       </div>
 
-      <div class="loader-percent">
-        <span>LOADING</span>
-        <span id="bootPercent">0%</span>
+
+      <div class="loader-status">
+
+        <div id="bootText">
+          BOOTING SYSTEM...
+        </div>
+
+        <div class="loader-line">
+
+          <div
+            id="loaderProgress"
+            class="loader-progress"
+          ></div>
+
+        </div>
+
+
+        <div class="loader-percent">
+
+          <span>
+            SYSTEM BOOT
+          </span>
+
+          <span id="loaderPercent">
+            0%
+          </span>
+
+        </div>
+
       </div>
 
     </div>
 
-  </div>
 
+    <!-- PLAYER CORNER -->
 
-  <!-- Player corner -->
-
-  <div class="loader-player">
-
-    <small>
-      PLAYER
-    </small>
-
-    <strong>
-      RAFSAN
-    </strong>
-
-  </div>
-
-
-  <div class="loader-version">
-    VER. 2026
-  </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     MAIN GAME WORLD
-     ===================================================== -->
-
-<main id="game">
-
-
-<!-- =====================================================
-     HOME ROOM
-     ===================================================== -->
-
-<section
-  id="home"
-  class="room active"
->
-
-
-  <!-- Background automatically comes from style.css -->
-
-  <div class="room-background"></div>
-
-  <div class="room-overlay"></div>
-
-
-  <!-- Player -->
-
-  <div class="player-corner">
-
-    <span>
-      PLAYER
-    </span>
-
-    <strong>
-      RAFSAN
-    </strong>
-
-  </div>
-
-
-  <!-- Time near artwork -->
-
-  <div class="digital-time">
-
-    <div id="homeTime">
-      00:00
-    </div>
-
-    <small id="homeDate">
-      LOADING...
-    </small>
-
-  </div>
-
-
-  <!-- Main title -->
-
-  <div class="home-center">
-
-    <div class="mini-label">
-      SENPAI.AC
-    </div>
-
-    <h1>
-      RAFSAN
-    </h1>
-
-    <p>
-      DIGITAL WORLD
-    </p>
-
-  </div>
-
-
-  <!-- Main menu -->
-
-  <nav class="game-menu">
-
-    <button
-      class="menu-item selected"
-      onclick="openRoom('profile')"
-    >
-      <span>01</span>
-      PROFILE
-    </button>
-
-
-    <button
-      class="menu-item"
-      onclick="openRoom('social')"
-    >
-      <span>02</span>
-      SOCIAL
-    </button>
-
-
-    <button
-      class="menu-item"
-      onclick="openRoom('time')"
-    >
-      <span>03</span>
-      SYSTEM TIME
-    </button>
-
-
-    <button
-      class="menu-item"
-      onclick="openRoom('system')"
-    >
-      <span>04</span>
-      SYSTEM
-    </button>
-
-  </nav>
-
-
-  <div class="home-hint">
-    SELECT AN OPTION
-  </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     PROFILE ROOM
-     ===================================================== -->
-
-<section
-  id="profile"
-  class="room sub-room"
->
-
-  <div class="room-header">
-
-    <span>
-      ROOM 01
-    </span>
-
-    <strong>
-      PLAYER PROFILE
-    </strong>
-
-  </div>
-
-
-  <div class="profile-room">
-
-    <div class="profile-symbol">
-      R
-    </div>
-
-
-    <div class="profile-content">
+    <div class="loader-player">
 
       <small>
-        PLAYER IDENTIFICATION
+        PLAYER
       </small>
 
-      <h1>
+      <strong>
         RAFSAN
-      </h1>
+      </strong>
 
-      <p>
-        Anime • Gaming • Code • Digital World
-      </p>
+    </div>
 
 
-      <div class="profile-data">
-
-        <div>
-          <span>PLAYER</span>
-          <strong>RAFSAN</strong>
-        </div>
-
-        <div>
-          <span>STATUS</span>
-          <strong>ONLINE</strong>
-        </div>
-
-        <div>
-          <span>CLASS</span>
-          <strong>CREATOR</strong>
-        </div>
-
-        <div>
-          <span>LEVEL</span>
-          <strong>∞</strong>
-        </div>
-
-      </div>
-
+    <div class="loader-version">
+      BUILD 2026 // v1.0
     </div>
 
   </div>
 
 
-  <button
-    class="back-button"
-    onclick="openRoom('home')"
-  >
-    ← BACK
-  </button>
 
-</section>
+  <!-- =====================================================
+       GAME WORLD
+       ===================================================== -->
+
+  <main id="game">
 
 
+    <!-- ===================================================
+         HOME ROOM
+         =================================================== -->
 
-<!-- =====================================================
-     SOCIAL ROOM
-     ===================================================== -->
-
-<section
-  id="social"
-  class="room sub-room"
->
-
-  <div class="room-header">
-
-    <span>
-      ROOM 02
-    </span>
-
-    <strong>
-      SOCIAL NETWORK
-    </strong>
-
-  </div>
-
-
-  <div class="social-menu">
-
-
-    <!-- Instagram -->
-
-    <button
-      class="social-option"
-      onclick="openRoom('instagram')"
+    <section
+      id="homeRoom"
+      class="room active"
     >
 
-      <span>
-        01
-      </span>
+      <div class="room-background"></div>
 
-      <div>
+      <div class="room-overlay"></div>
+
+
+      <!-- PLAYER -->
+
+      <div class="player-corner">
+
+        <span>
+          PLAYER
+        </span>
+
+        <strong>
+          RAFSAN
+        </strong>
+
+      </div>
+
+
+      <!-- DIGITAL CLOCK -->
+
+      <div class="digital-time">
+
+        <div id="homeTime">
+          00:00:00
+        </div>
+
+        <small id="homeDate">
+          SYSTEM DATE
+        </small>
+
+      </div>
+
+
+      <!-- MAIN TITLE -->
+
+      <div class="home-center">
+
+        <div class="mini-label">
+          SENPAI.AC // ACCESS GRANTED
+        </div>
+
+        <h1>
+          RAFSAN
+        </h1>
+
+        <p>
+          ANIME // GAMING // CODE // DIGITAL WORLD
+        </p>
+
+      </div>
+
+
+      <!-- GAME MENU -->
+
+      <nav class="game-menu">
+
+        <button
+          class="menu-item selected"
+          data-room="profileRoom"
+        >
+          <span>01</span>
+          PROFILE
+        </button>
+
+
+        <button
+          class="menu-item"
+          data-room="socialRoom"
+        >
+          <span>02</span>
+          SOCIAL
+        </button>
+
+
+        <button
+          class="menu-item"
+          data-room="timeRoom"
+        >
+          <span>03</span>
+          SYSTEM TIME
+        </button>
+
+
+        <button
+          class="menu-item"
+          data-room="systemRoom"
+        >
+          <span>04</span>
+          SYSTEM
+        </button>
+
+      </nav>
+
+
+      <div class="home-hint">
+        SELECT // ENTER SYSTEM
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         PROFILE ROOM
+         =================================================== -->
+
+    <section
+      id="profileRoom"
+      class="room sub-room"
+    >
+
+      <div class="room-background"></div>
+
+      <div class="room-overlay"></div>
+
+
+      <div class="player-corner">
+
+        <span>
+          PLAYER
+        </span>
+
+        <strong>
+          RAFSAN
+        </strong>
+
+      </div>
+
+
+      <div class="room-header">
+
+        <span>
+          ROOM 01
+        </span>
+
+        <strong>
+          PLAYER PROFILE
+        </strong>
+
+      </div>
+
+
+      <div class="profile-room">
+
+
+        <div class="profile-symbol">
+          R
+        </div>
+
+
+        <div class="profile-content">
+
+          <small>
+            PLAYER IDENTIFICATION
+          </small>
+
+          <h1>
+            RAFSAN
+          </h1>
+
+          <p>
+            Anime enthusiast // Gamer // Developer
+          </p>
+
+
+          <div class="profile-data">
+
+            <div>
+
+              <span>
+                STATUS
+              </span>
+
+              <strong>
+                ONLINE
+              </strong>
+
+            </div>
+
+
+            <div>
+
+              <span>
+                CLASS
+              </span>
+
+              <strong>
+                CREATOR
+              </strong>
+
+            </div>
+
+
+            <div>
+
+              <span>
+                LEVEL
+              </span>
+
+              <strong>
+                ∞
+              </strong>
+
+            </div>
+
+
+            <div>
+
+              <span>
+                ACCESS
+              </span>
+
+              <strong>
+                GRANTED
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <button
+        class="back-button"
+        data-back
+      >
+        ← BACK TO HOME
+      </button>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         SOCIAL ROOM
+         =================================================== -->
+
+    <section
+      id="socialRoom"
+      class="room sub-room"
+    >
+
+      <div class="room-background"></div>
+
+      <div class="room-overlay"></div>
+
+
+      <div class="player-corner">
+
+        <span>
+          PLAYER
+        </span>
+
+        <strong>
+          RAFSAN
+        </strong>
+
+      </div>
+
+
+      <div class="room-header">
+
+        <span>
+          ROOM 02
+        </span>
+
+        <strong>
+          PLAYER CONNECTIONS
+        </strong>
+
+      </div>
+
+
+      <div class="social-menu">
+
+
+        <!-- INSTAGRAM -->
+
+        <button
+          class="social-option"
+          data-social="instagram"
+        >
+
+          <span>
+            01
+          </span>
+
+          <div>
+
+            <strong>
+              INSTAGRAM
+            </strong>
+
+            <small>
+              @_i_am_eren.jeager
+            </small>
+
+          </div>
+
+          <b>
+            ↗
+          </b>
+
+        </button>
+
+
+        <!-- GITHUB -->
+
+        <button
+          class="social-option"
+          data-social="github"
+        >
+
+          <span>
+            02
+          </span>
+
+          <div>
+
+            <strong>
+              GITHUB
+            </strong>
+
+            <small>
+              github.com/rafsani533-maker
+            </small>
+
+          </div>
+
+          <b>
+            ↗
+          </b>
+
+        </button>
+
+
+        <!-- YOUTUBE -->
+
+        <button
+          class="social-option"
+          data-social="youtube"
+        >
+
+          <span>
+            03
+          </span>
+
+          <div>
+
+            <strong>
+              YOUTUBE
+            </strong>
+
+            <small>
+              Sickapich by rs.
+            </small>
+
+          </div>
+
+          <b>
+            ↗
+          </b>
+
+        </button>
+
+
+        <!-- DISCORD -->
+
+        <button
+          class="social-option"
+          data-social="discord"
+        >
+
+          <span>
+            04
+          </span>
+
+          <div>
+
+            <strong>
+              DISCORD
+            </strong>
+
+            <small>
+              Coming soon
+            </small>
+
+          </div>
+
+          <b>
+            ↗
+          </b>
+
+        </button>
+
+      </div>
+
+
+      <button
+        class="back-button"
+        data-back
+      >
+        ← BACK TO HOME
+      </button>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         INSTAGRAM DETAIL
+         =================================================== -->
+
+    <section
+      id="instagramRoom"
+      class="room sub-room social-detail"
+    >
+
+      <div class="room-background"></div>
+
+      <div class="room-overlay"></div>
+
+
+      <div class="detail-number">
+        01
+      </div>
+
+
+      <div class="room-header">
+
+        <span>
+          SOCIAL CONNECTION
+        </span>
 
         <strong>
           INSTAGRAM
         </strong>
 
+      </div>
+
+
+      <div class="detail-content">
+
         <small>
-          @_i_am_eren.jeager
+          PLAYER SOCIAL // 01
         </small>
+
+        <h1>
+          INSTAGRAM
+        </h1>
+
+        <p>
+          Follow RAFSAN and explore the player's
+          anime, gaming and digital world.
+        </p>
+
+
+        <a
+          class="open-social"
+          href="https://www.instagram.com/_i_am_eren.jeager/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OPEN INSTAGRAM ↗
+        </a>
 
       </div>
 
-      <b>
-        →
-      </b>
 
-    </button>
+      <button
+        class="back-button"
+        data-social-back
+      >
+        ← BACK TO SOCIAL
+      </button>
+
+    </section>
 
 
-    <!-- GitHub -->
 
-    <button
-      class="social-option"
-      onclick="openRoom('github')"
+    <!-- ===================================================
+         GITHUB DETAIL
+         =================================================== -->
+
+    <section
+      id="githubRoom"
+      class="room sub-room social-detail"
     >
 
-      <span>
-        02
-      </span>
+      <div class="room-background"></div>
 
-      <div>
+      <div class="room-overlay"></div>
+
+
+      <div class="detail-number">
+        02
+      </div>
+
+
+      <div class="room-header">
+
+        <span>
+          PLAYER DEVELOPMENT
+        </span>
 
         <strong>
           GITHUB
         </strong>
 
+      </div>
+
+
+      <div class="detail-content">
+
         <small>
-          github.com/rafsani533-maker
+          PLAYER SOCIAL // 02
         </small>
+
+        <h1>
+          GITHUB
+        </h1>
+
+        <p>
+          Projects, experiments, code and digital
+          creations by RAFSAN.
+        </p>
+
+
+        <a
+          class="open-social"
+          href="https://github.com/rafsani533-maker"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OPEN GITHUB ↗
+        </a>
 
       </div>
 
-      <b>
-        →
-      </b>
 
-    </button>
+      <button
+        class="back-button"
+        data-social-back
+      >
+        ← BACK TO SOCIAL
+      </button>
+
+    </section>
 
 
-    <!-- YouTube -->
 
-    <button
-      class="social-option"
-      onclick="openRoom('youtube')"
+    <!-- ===================================================
+         YOUTUBE DETAIL
+         =================================================== -->
+
+    <section
+      id="youtubeRoom"
+      class="room sub-room social-detail"
     >
 
-      <span>
-        03
-      </span>
+      <div class="room-background"></div>
 
-      <div>
+      <div class="room-overlay"></div>
+
+
+      <div class="detail-number">
+        03
+      </div>
+
+
+      <div class="room-header">
+
+        <span>
+          PLAYER MEDIA
+        </span>
 
         <strong>
           YOUTUBE
         </strong>
 
+      </div>
+
+
+      <div class="detail-content">
+
         <small>
-          Sickapich by rs.
+          PLAYER SOCIAL // 03
         </small>
+
+        <h1>
+          YOUTUBE
+        </h1>
+
+        <p>
+          Gaming, edits, anime and other content
+          from RAFSAN.
+        </p>
+
+
+        <a
+          class="open-social"
+          href="https://youtube.com/@rafsanislam-bc9jk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OPEN YOUTUBE ↗
+        </a>
 
       </div>
 
-      <b>
-        →
-      </b>
 
-    </button>
+      <button
+        class="back-button"
+        data-social-back
+      >
+        ← BACK TO SOCIAL
+      </button>
+
+    </section>
 
 
-    <!-- Discord -->
 
-    <button
-      class="social-option"
-      onclick="openRoom('discord')"
+    <!-- ===================================================
+         DISCORD DETAIL
+         =================================================== -->
+
+    <section
+      id="discordRoom"
+      class="room sub-room social-detail"
     >
 
-      <span>
-        04
-      </span>
+      <div class="room-background"></div>
 
-      <div>
+      <div class="room-overlay"></div>
+
+
+      <div class="detail-number">
+        04
+      </div>
+
+
+      <div class="room-header">
+
+        <span>
+          PLAYER CONNECTION
+        </span>
 
         <strong>
           DISCORD
         </strong>
 
+      </div>
+
+
+      <div class="detail-content">
+
         <small>
-          COMING SOON
+          PLAYER SOCIAL // 04
         </small>
+
+        <h1>
+          DISCORD
+        </h1>
+
+        <p>
+          The Discord connection is currently
+          unavailable.
+        </p>
+
+
+        <span class="coming-soon">
+          DISCORD // COMING SOON
+        </span>
 
       </div>
 
-      <b>
-        →
-      </b>
 
-    </button>
+      <button
+        class="back-button"
+        data-social-back
+      >
+        ← BACK TO SOCIAL
+      </button>
 
-
-  </div>
-
-
-  <button
-    class="back-button"
-    onclick="openRoom('home')"
-  >
-    ← BACK
-  </button>
-
-</section>
+    </section>
 
 
 
-<!-- =====================================================
-     INSTAGRAM ROOM
-     ===================================================== -->
+    <!-- ===================================================
+         SYSTEM TIME ROOM
+         =================================================== -->
 
-<section
-  id="instagram"
-  class="room sub-room social-detail"
->
-
-  <div class="detail-number">
-    01
-  </div>
-
-  <div class="detail-content">
-
-    <small>
-      SOCIAL // INSTAGRAM
-    </small>
-
-    <h1>
-      @_i_am_eren.jeager
-    </h1>
-
-    <p>
-      Connect with me on Instagram.
-    </p>
-
-
-    <a
-      href="https://www.instagram.com/_i_am_eren.jeager/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="open-social"
+    <section
+      id="timeRoom"
+      class="room sub-room time-room"
     >
-      OPEN INSTAGRAM ↗
-    </a>
 
-  </div>
+      <div class="room-background"></div>
 
-
-  <button
-    class="back-button"
-    onclick="openRoom('social')"
-  >
-    ← SOCIAL
-  </button>
-
-</section>
+      <div class="room-overlay"></div>
 
 
+      <div class="player-corner">
 
-<!-- =====================================================
-     GITHUB ROOM
-     ===================================================== -->
+        <span>
+          PLAYER
+        </span>
 
-<section
-  id="github"
-  class="room sub-room social-detail"
->
+        <strong>
+          RAFSAN
+        </strong>
 
-  <div class="detail-number">
-    02
-  </div>
-
-  <div class="detail-content">
-
-    <small>
-      SOCIAL // GITHUB
-    </small>
-
-    <h1>
-      RAFSAN533-MAKER
-    </h1>
-
-    <p>
-      My projects, experiments and code.
-    </p>
+      </div>
 
 
-    <a
-      href="https://github.com/rafsani533-maker"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="open-social"
+      <div class="room-header">
+
+        <span>
+          ROOM 03
+        </span>
+
+        <strong>
+          SYSTEM TIME
+        </strong>
+
+      </div>
+
+
+      <div class="big-clock">
+
+        <div id="bigTime">
+          00:00:00
+        </div>
+
+        <span id="bigDate">
+          LOADING SYSTEM DATE...
+        </span>
+
+      </div>
+
+
+      <div class="system-status">
+
+        <span>
+          LOCAL TIME
+        </span>
+
+        <strong>
+          ACTIVE
+        </strong>
+
+      </div>
+
+
+      <button
+        class="back-button"
+        data-back
+      >
+        ← BACK TO HOME
+      </button>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         SYSTEM ROOM
+         =================================================== -->
+
+    <section
+      id="systemRoom"
+      class="room sub-room"
     >
-      OPEN GITHUB ↗
-    </a>
 
-  </div>
+      <div class="room-background"></div>
 
+      <div class="room-overlay"></div>
 
-  <button
-    class="back-button"
-    onclick="openRoom('social')"
-  >
-    ← SOCIAL
-  </button>
 
-</section>
+      <div class="player-corner">
 
+        <span>
+          PLAYER
+        </span>
 
+        <strong>
+          RAFSAN
+        </strong>
 
-<!-- =====================================================
-     YOUTUBE ROOM
-     ===================================================== -->
+      </div>
 
-<section
-  id="youtube"
-  class="room sub-room social-detail"
->
 
-  <div class="detail-number">
-    03
-  </div>
+      <div class="room-header">
 
-  <div class="detail-content">
+        <span>
+          ROOM 04
+        </span>
 
-    <small>
-      SOCIAL // YOUTUBE
-    </small>
+        <strong>
+          SYSTEM STATUS
+        </strong>
 
-    <h1>
-      SICKAPICH BY RS.
-    </h1>
+      </div>
 
-    <p>
-      Watch my videos and content.
-    </p>
 
+      <div class="system-menu">
 
-    <a
-      href="https://youtube.com/@rafsanislam-bc9jk"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="open-social"
-    >
-      OPEN YOUTUBE ↗
-    </a>
 
-  </div>
+        <div>
 
+          <span>
+            NETWORK
+          </span>
 
-  <button
-    class="back-button"
-    onclick="openRoom('social')"
-  >
-    ← SOCIAL
-  </button>
+          <strong>
+            ONLINE
+          </strong>
 
-</section>
+        </div>
 
 
+        <div>
 
-<!-- =====================================================
-     DISCORD ROOM
-     ===================================================== -->
+          <span>
+            SECURITY
+          </span>
 
-<section
-  id="discord"
-  class="room sub-room social-detail"
->
+          <strong>
+            ACTIVE
+          </strong>
 
-  <div class="detail-number">
-    04
-  </div>
+        </div>
 
-  <div class="detail-content">
 
-    <small>
-      SOCIAL // DISCORD
-    </small>
+        <div>
 
-    <h1>
-      DISCORD
-    </h1>
+          <span>
+            PLAYER ACCESS
+          </span>
 
-    <p>
-      Discord connection is currently unavailable.
-    </p>
+          <strong>
+            GRANTED
+          </strong>
 
-    <div class="coming-soon">
-      COMING SOON
-    </div>
+        </div>
 
-  </div>
 
+        <div>
 
-  <button
-    class="back-button"
-    onclick="openRoom('social')"
-  >
-    ← SOCIAL
-  </button>
+          <span>
+            SYSTEM
+          </span>
 
-</section>
+          <strong>
+            STABLE
+          </strong>
 
+        </div>
 
 
-<!-- =====================================================
-     TIME ROOM
-     ===================================================== -->
+        <div>
 
-<section
-  id="time"
-  class="room sub-room time-room"
->
+          <span>
+            VERSION
+          </span>
 
-  <div class="room-header">
+          <strong>
+            SENPAI.AC 1.0
+          </strong>
 
-    <span>
-      ROOM 03
-    </span>
+        </div>
 
-    <strong>
-      SYSTEM TIME
-    </strong>
 
-  </div>
+        <div>
 
+          <span>
+            YEAR
+          </span>
 
-  <div class="big-clock">
+          <strong>
+            2026
+          </strong>
 
-    <div id="bigTime">
-      00:00:00
-    </div>
+        </div>
 
-    <small id="bigDate">
-      LOADING...
-    </small>
+      </div>
 
-  </div>
 
+      <div class="system-message">
 
-  <div class="system-status">
+        SENPAI.AC SYSTEM RUNNING NORMAL<br>
 
-    <span>
-      SYSTEM
-    </span>
+        PLAYER CONNECTION ESTABLISHED<br>
 
-    <strong>
-      ONLINE
-    </strong>
+        ALL SYSTEMS OPERATIONAL
 
-  </div>
+      </div>
 
 
-  <button
-    class="back-button"
-    onclick="openRoom('home')"
-  >
-    ← BACK
-  </button>
+      <button
+        class="back-button"
+        data-back
+      >
+        ← BACK TO HOME
+      </button>
 
-</section>
+    </section>
 
+  </main>
 
 
-<!-- =====================================================
-     SYSTEM ROOM
-     ===================================================== -->
 
-<section
-  id="system"
-  class="room sub-room"
->
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
 
-  <div class="room-header">
+  <script>
 
-    <span>
-      ROOM 04
-    </span>
+    /* =====================================================
+       LOADING SYSTEM
+       ===================================================== */
 
-    <strong>
-      SENPAI.AC SYSTEM
-    </strong>
+    const gameLoader =
+      document.getElementById("gameLoader");
 
-  </div>
+    const loaderProgress =
+      document.getElementById("loaderProgress");
 
+    const loaderPercent =
+      document.getElementById("loaderPercent");
 
-  <div class="system-menu">
+    const bootText =
+      document.getElementById("bootText");
 
-    <div>
-      <span>WORLD</span>
-      <strong>ONLINE</strong>
-    </div>
 
-    <div>
-      <span>PLAYER</span>
-      <strong>RAFSAN</strong>
-    </div>
+    let progress = 0;
 
-    <div>
-      <span>SECURITY</span>
-      <strong>ACTIVE</strong>
-    </div>
 
-    <div>
-      <span>VERSION</span>
-      <strong>2026</strong>
-    </div>
+    const bootMessages = [
 
-  </div>
+      "INITIALIZING SYSTEM...",
 
+      "LOADING PLAYER DATA...",
 
-  <div class="system-message">
-    SENPAI.AC DIGITAL WORLD<br>
-    CONNECTION ESTABLISHED.
-  </div>
+      "CONNECTING DIGITAL WORLD...",
 
+      "CHECKING SECURITY...",
 
-  <button
-    class="back-button"
-    onclick="openRoom('home')"
-  >
-    ← BACK
-  </button>
+      "LOADING SENPAI.AC...",
 
-</section>
+      "PLAYER ACCESS GRANTED",
 
+      "SYSTEM READY"
 
-</main>
+    ];
 
 
+    const loaderInterval =
+      setInterval(() => {
 
-<!-- =====================================================
-     JAVASCRIPT
-     ===================================================== -->
+        progress +=
+          Math.floor(Math.random() * 7) + 3;
 
-<script>
 
+        if (progress >= 100) {
 
-/* =====================================================
-   LOADING SCREEN
-   ===================================================== */
+          progress = 100;
 
-const loader =
-  document.getElementById("loader");
+          clearInterval(loaderInterval);
 
-const bootProgress =
-  document.getElementById("bootProgress");
+          bootText.textContent =
+            "SYSTEM READY // ACCESS GRANTED";
 
-const bootPercent =
-  document.getElementById("bootPercent");
+          setTimeout(() => {
 
-const bootText =
-  document.getElementById("bootText");
+            gameLoader.classList.add("loaded");
 
+          }, 650);
 
-const bootMessages = [
+        }
 
-  "INITIALIZING WORLD...",
 
-  "LOADING PLAYER DATA...",
+        loaderProgress.style.width =
+          progress + "%";
 
-  "CONNECTING TO SENPAI NETWORK...",
 
-  "SYNCHRONIZING DIGITAL SPACE...",
+        loaderPercent.textContent =
+          progress + "%";
 
-  "VERIFYING PLAYER...",
 
-  "WELCOME RAFSAN."
+        const messageIndex =
+          Math.min(
+            Math.floor(progress / 15),
+            bootMessages.length - 1
+          );
 
-];
 
+        bootText.textContent =
+          bootMessages[messageIndex];
 
-let progress = 0;
 
-let messageIndex = 0;
+      }, 100);
 
 
-const boot =
-  setInterval(() => {
+    /* =====================================================
+       CLOCK
+       ===================================================== */
 
+    function updateClock() {
 
-    progress +=
-      Math.floor(
-        Math.random() * 7
-      ) + 3;
+      const now = new Date();
 
 
-    if (progress >= 100) {
-
-      progress = 100;
-
-      clearInterval(boot);
-
-
-      bootProgress.style.width =
-        "100%";
-
-      bootPercent.textContent =
-        "100%";
-
-      bootText.textContent =
-        "WELCOME RAFSAN.";
-
-
-      setTimeout(() => {
-
-        loader.classList.add(
-          "loaded"
+      const time =
+        now.toLocaleTimeString(
+          [],
+          {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false
+          }
         );
 
-      }, 700);
+
+      const date =
+        now.toLocaleDateString(
+          [],
+          {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+          }
+        );
 
 
-      return;
+      const homeTime =
+        document.getElementById("homeTime");
+
+      const homeDate =
+        document.getElementById("homeDate");
+
+      const bigTime =
+        document.getElementById("bigTime");
+
+      const bigDate =
+        document.getElementById("bigDate");
+
+
+      if (homeTime)
+        homeTime.textContent = time;
+
+
+      if (homeDate)
+        homeDate.textContent = date;
+
+
+      if (bigTime)
+        bigTime.textContent = time;
+
+
+      if (bigDate)
+        bigDate.textContent = date;
 
     }
 
 
-    bootProgress.style.width =
-      progress + "%";
+    updateClock();
+
+    setInterval(updateClock, 1000);
 
 
-    bootPercent.textContent =
-      progress + "%";
+
+    /* =====================================================
+       ROOM SYSTEM
+       ===================================================== */
+
+    const rooms =
+      document.querySelectorAll(".room");
 
 
-    if (
-      progress >
-      messageIndex * 15
-    ) {
+    const menuItems =
+      document.querySelectorAll(".menu-item");
 
-      bootText.textContent =
-        bootMessages[
-          Math.min(
-            messageIndex,
-            bootMessages.length - 1
-          )
-        ];
 
-      messageIndex++;
+    function openRoom(roomId) {
+
+      rooms.forEach(room => {
+
+        room.classList.remove("active");
+
+      });
+
+
+      const target =
+        document.getElementById(roomId);
+
+
+      if (target) {
+
+        target.classList.add("active");
+
+      }
 
     }
 
-  }, 100);
+
+
+    /* HOME MENU */
+
+    menuItems.forEach(item => {
+
+      item.addEventListener(
+        "click",
+        () => {
+
+          const room =
+            item.dataset.room;
+
+
+          menuItems.forEach(
+            button =>
+              button.classList.remove(
+                "selected"
+              )
+          );
+
+
+          item.classList.add("selected");
+
+
+          openRoom(room);
+
+        }
+      );
+
+    });
 
 
 
-/* =====================================================
-   ROOM SYSTEM
-   ===================================================== */
+    /* =====================================================
+       BACK TO HOME
+       ===================================================== */
 
-let currentRoom = "home";
-
-
-function openRoom(roomName) {
-
-
-  const current =
-    document.getElementById(
-      currentRoom
-    );
+    const backButtons =
+      document.querySelectorAll(
+        "[data-back]"
+      );
 
 
-  const next =
-    document.getElementById(
-      roomName
-    );
+    backButtons.forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          openRoom("homeRoom");
 
 
-  if (!next) return;
+          menuItems.forEach(
+            item =>
+              item.classList.remove(
+                "selected"
+              )
+          );
 
 
-  if (current === next) return;
+          const firstMenu =
+            document.querySelector(
+              '.menu-item[data-room="profileRoom"]'
+            );
 
 
-  current.classList.remove(
-    "active"
-  );
+          if (firstMenu) {
 
+            firstMenu.classList.add(
+              "selected"
+            );
 
-  current.classList.add(
-    "room-exit"
-  );
+          }
 
+        }
+      );
 
-  setTimeout(() => {
-
-    current.classList.remove(
-      "room-exit"
-    );
-
-    next.classList.add(
-      "active"
-    );
-
-  }, 250);
-
-
-  currentRoom = roomName;
-
-
-}
+    });
 
 
 
-/* =====================================================
-   CLOCK
-   ===================================================== */
+    /* =====================================================
+       SOCIAL ROOMS
+       ===================================================== */
 
-function updateClock() {
+    const socialButtons =
+      document.querySelectorAll(
+        "[data-social]"
+      );
 
 
-  const now =
-    new Date();
+    const socialRooms = {
+
+      instagram: "instagramRoom",
+
+      github: "githubRoom",
+
+      youtube: "youtubeRoom",
+
+      discord: "discordRoom"
+
+    };
 
 
-  const time =
-    now.toLocaleTimeString(
-      [],
-      {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false
+    socialButtons.forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          const social =
+            button.dataset.social;
+
+
+          const room =
+            socialRooms[social];
+
+
+          if (room) {
+
+            openRoom(room);
+
+          }
+
+        }
+      );
+
+    });
+
+
+
+    /* =====================================================
+       SOCIAL BACK
+       ===================================================== */
+
+    const socialBackButtons =
+      document.querySelectorAll(
+        "[data-social-back]"
+      );
+
+
+    socialBackButtons.forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          openRoom("socialRoom");
+
+        }
+      );
+
+    });
+
+
+
+    /* =====================================================
+       KEYBOARD CONTROLS
+       ===================================================== */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (event.key === "Escape") {
+
+          openRoom("homeRoom");
+
+        }
+
       }
     );
 
 
-  const shortTime =
-    now.toLocaleTimeString(
-      [],
-      {
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false
-      }
-    );
 
+    /* =====================================================
+       PREVENT EMPTY DISCORD LINK
+       ===================================================== */
 
-  const date =
-    now.toLocaleDateString(
-      [],
-      {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-      }
-    );
+    document
+      .querySelectorAll(
+        'a[href="#"]'
+      )
+      .forEach(link => {
 
+        link.addEventListener(
+          "click",
+          event => {
 
-  document.getElementById(
-    "homeTime"
-  ).textContent =
-    shortTime;
+            event.preventDefault();
 
+          }
+        );
 
-  document.getElementById(
-    "homeDate"
-  ).textContent =
-    date;
+      });
 
-
-  document.getElementById(
-    "bigTime"
-  ).textContent =
-    time;
-
-
-  document.getElementById(
-    "bigDate"
-  ).textContent =
-    date;
-
-}
-
-
-updateClock();
-
-setInterval(
-  updateClock,
-  1000
-);
-
-
-
-/* =====================================================
-   KEYBOARD GAME NAVIGATION
-   ===================================================== */
-
-document.addEventListener(
-  "keydown",
-  event => {
-
-
-    if (
-      event.key === "Escape" &&
-      currentRoom !== "home"
-    ) {
-
-      openRoom("home");
-
-    }
-
-
-    if (
-      event.key === "1"
-    ) {
-
-      openRoom("profile");
-
-    }
-
-
-    if (
-      event.key === "2"
-    ) {
-
-      openRoom("social");
-
-    }
-
-
-    if (
-      event.key === "3"
-    ) {
-
-      openRoom("time");
-
-    }
-
-
-    if (
-      event.key === "4"
-    ) {
-
-      openRoom("system");
-
-    }
-
-  }
-);
-
-
-</script>
-
+  </script>
 
 </body>
 
